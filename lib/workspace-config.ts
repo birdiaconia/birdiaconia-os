@@ -26,7 +26,6 @@ export const rooms: { id: RoomId; label: string; description: string }[] = [
   { id: "reports", label: "Reports", description: "보고서 후보" },
   { id: "decisions", label: "Decisions", description: "결정 요청" },
   { id: "storage", label: "Storage", description: "Drive/Sheets 저장소 상태" },
-  { id: "sensitive", label: "Sensitive Room", description: "민감 기록 접근 준비" },
   { id: "settings", label: "Settings", description: "Workspace 설정" },
 ];
 

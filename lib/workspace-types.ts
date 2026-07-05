@@ -17,7 +17,6 @@ export type RoomId =
   | "reports"
   | "decisions"
   | "storage"
-  | "sensitive"
   | "settings";
 
 export type FormType =
@@ -26,9 +25,6 @@ export type FormType =
   | "decisions"
   | "fieldRecords"
   | "fieldPrivate"
-  | "casePrivate"
-  | "crisisRecord"
-  | "healthCareMemo"
   | "research"
   | "business"
   | "grants"
