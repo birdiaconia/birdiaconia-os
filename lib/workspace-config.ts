@@ -25,6 +25,7 @@ export const rooms: { id: RoomId; label: string; description: string }[] = [
   { id: "ai-requests", label: "AI Requests", description: "AI 작업 요청" },
   { id: "reports", label: "Reports", description: "보고서 후보" },
   { id: "decisions", label: "Decisions", description: "결정 요청" },
+  { id: "bis", label: "BIS", description: "AI 작업 실행을 위한 Command Layer" },
   { id: "storage", label: "Storage", description: "Drive/Sheets 저장소 상태" },
   { id: "settings", label: "Settings", description: "Workspace 설정" },
 ];

@@ -20,9 +20,8 @@ export const bisAgents: BISAgent[] = [
       "reference materials",
     ],
     outputs: ["research briefs", "source maps", "evidence summaries"],
-    exampleCommand: "Create an evidence summary for the housing pilot using Research Objects and field notes.",
     exampleCommand:
-      "Create an evidence summary using Research Objects and field notes.",
+      "Create an evidence summary for the housing pilot using Research Objects and field notes.",
     status: "Active",
   },
   {
@@ -56,13 +55,10 @@ export const bisAgents: BISAgent[] = [
   {
     name: "Pilot AI",
     role: "Designs and tracks field pilots.",
-    inputs: ["Mission Control priorities", "field sites", "AppSheet records", "execution standards"],
-    outputs: ["pilot plans", "execution checklists", "field logs", "evaluation notes"],
-    exampleCommand: "Create a 30-day pilot execution checklist for the community care test.",
     inputs: [
       "Mission Control priorities",
       "field sites",
-      "AppSheet records",
+      "Google Forms responses",
       "execution standards",
     ],
     outputs: [
@@ -71,17 +67,16 @@ export const bisAgents: BISAgent[] = [
       "field logs",
       "evaluation notes",
     ],
-    exampleCommand: "Create a 30-day pilot execution checklist.",
+    exampleCommand: "Create a 30-day pilot execution checklist for the community care test.",
     status: "Active",
   },
   {
     name: "Data AI",
-    role: "Manages structured records from Google Sheets, AppSheet, GitHub issues, and research objects.",
-    inputs: ["Google Sheets", "AppSheet", "GitHub issues", "Research Objects"],
+    role: "Manages structured records from Google Sheets, Google Forms responses, GitHub issues, and research objects.",
+    inputs: ["Google Sheets", "Google Forms responses", "GitHub issues", "Research Objects"],
     outputs: ["dashboards", "indicators", "summaries", "data quality checks"],
-    exampleCommand: "Check AppSheet records for missing pilot status and owner fields.",
     exampleCommand:
-      "Check AppSheet records for missing status and owner fields.",
+      "Check Google Sheets records for missing status and owner fields.",
     status: "Needs Data",
   },
   {
@@ -90,16 +85,6 @@ export const bisAgents: BISAgent[] = [
     inputs: ["briefs", "case notes", "strategy memos", "approved templates"],
     outputs: ["PDF", "PPT", "Word", "reports", "proposals", "manuals", "templates"],
     exampleCommand: "Turn the policy brief into a PDF report and PPT deck outline.",
-    outputs: [
-      "PDF",
-      "PPT",
-      "Word",
-      "reports",
-      "proposals",
-      "manuals",
-      "templates",
-    ],
-    exampleCommand: "Turn the policy brief into a PDF report and PPT outline.",
     status: "Active",
   },
   {
@@ -127,19 +112,6 @@ export const bisAgents: BISAgent[] = [
     inputs: ["case records", "assessment notes", "service plans", "monitoring data"],
     outputs: ["case summaries", "service plans", "monitoring notes", "evaluation reports"],
     exampleCommand: "Summarize this welfare case record into a service plan and monitoring checklist.",
-    inputs: [
-      "case records",
-      "assessment notes",
-      "service plans",
-      "monitoring data",
-    ],
-    outputs: [
-      "case summaries",
-      "service plans",
-      "monitoring notes",
-      "evaluation reports",
-    ],
-    exampleCommand: "Summarize this welfare case record into a service plan.",
     status: "Needs Data",
   },
   {
@@ -184,10 +156,9 @@ export const bisSystem = {
   operatingLanguage: [
     "GitHub is the backend.",
     "Workspace is the operations room.",
-    "Google Sheets + AppSheet is the input system.",
+    "Google Forms responses flow into purpose-specific Google Sheets.",
     "Outputs include PDF, PPT, Word, grant proposals, policy reports, and field execution documents.",
   ],
-};
 };
 
 export type BISSystem = typeof bisSystem;

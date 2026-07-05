@@ -2,13 +2,13 @@ import { areSensitiveFormsEnabled } from "./workspace-config";
 import type { FormType, Role, RoomId, UserObject, WorkspaceMode } from "./workspace-types";
 
 const privateRoomPermissions: Record<Role, RoomId[]> = {
-  Owner: ["today", "input", "tasks", "schedules", "fields", "research", "business", "ai-requests", "reports", "decisions", "storage", "settings"],
-  Operator: ["today", "input", "tasks", "schedules", "fields", "ai-requests", "reports", "decisions", "storage", "settings"],
-  Field: ["today", "input", "fields", "storage"],
-  Researcher: ["today", "input", "research", "reports", "ai-requests", "storage"],
-  Partner: ["today", "input", "business", "storage"],
-  Viewer: ["today", "tasks", "schedules", "fields", "research", "business", "ai-requests", "reports", "decisions", "storage"],
-  Guest: ["today", "input", "storage"],
+  Owner: ["today", "input", "tasks", "schedules", "fields", "research", "business", "ai-requests", "reports", "decisions", "bis", "storage", "settings"],
+  Operator: ["today", "input", "tasks", "schedules", "fields", "ai-requests", "reports", "decisions", "bis", "storage", "settings"],
+  Field: ["today", "input", "fields", "bis", "storage"],
+  Researcher: ["today", "input", "research", "reports", "ai-requests", "bis", "storage"],
+  Partner: ["today", "input", "business", "bis", "storage"],
+  Viewer: ["today", "tasks", "schedules", "fields", "research", "business", "ai-requests", "reports", "decisions", "bis", "storage"],
+  Guest: ["today", "input", "bis", "storage"],
 };
 
 const formPermissions: Record<Role, FormType[]> = {
@@ -21,7 +21,7 @@ const formPermissions: Record<Role, FormType[]> = {
   Guest: [],
 };
 
-export const publicRooms: RoomId[] = ["public-home", "today", "input", "storage"];
+export const publicRooms: RoomId[] = ["public-home", "today", "input", "bis", "storage"];
 export const sensitiveFormTypes: FormType[] = ["fieldPrivate"];
 
 export function canViewRoom(role: Role, room: RoomId, mode: WorkspaceMode = "public") {

@@ -16,6 +16,7 @@ export type RoomId =
   | "ai-requests"
   | "reports"
   | "decisions"
+  | "bis"
   | "storage"
   | "settings";
 
