@@ -1,363 +1,369 @@
-# AI Team Proposal
+# 버디아코니아 AI 운영팀 제안서
 
-## Repository evidence reviewed
+## 검토한 저장소 근거
 
-This proposal is based only on the current repository contents. The repository currently contains a single project description in `README.md`.
+이 제안서는 현재 저장소에 있는 내용만을 근거로 작성했다. 현재 저장소에는 `README.md`의 프로젝트 설명이 핵심 근거로 제공되어 있다.
 
-Evidence found:
+확인한 내용은 다음과 같다.
 
-- The project is named **Birdiaconia OS**.
-- Birdiaconia OS is described as a project operating system for managing Birdiaconia's design, execution, records, automation, content, data, and decision-making.
-- The operating principles state that conversations are temporary inputs, decisions are recorded as documents, work is divided into Issues, execution is assigned to owners, and results are reflected through Pull Requests or document updates.
-- The intended repository structure includes areas for strategy, operations, data, agents, projects, and archive materials.
+- 프로젝트 이름은 **Birdiaconia OS**다.
+- Birdiaconia OS는 버디아코니아의 설계, 실행, 기록, 자동화, 콘텐츠, 데이터, 의사결정을 관리하기 위한 프로젝트 운영체계로 설명되어 있다.
+- 운영 원칙은 대화를 임시 입력값으로 보고, 결정은 문서로 남기며, 작업은 Issue로 나누고, 실행은 담당자에게 배정하며, 결과는 Pull Request 또는 문서 업데이트로 반영한다는 내용이다.
+- 기본 구조는 방향과 원칙, 운영 흐름, 데이터 모델과 AppSheet 구조, GPT·Codex·AppSheet 등 역할 정의, 실행 프로젝트, 사례와 참고 자료를 담는 영역으로 구성된다.
 
-## Inferred purpose of Birdiaconia
+## 버디아코니아의 현재 운영 목적
 
-From the repository contents alone, Birdiaconia appears to be an organization or initiative that needs a documented operating system for:
+현재 저장소 내용만 기준으로 볼 때, 버디아코니아는 다음과 같은 운영체계가 필요한 조직 또는 프로젝트로 이해된다.
 
-- Strategic direction, principles, and decisions.
-- Operational workflows and work methods.
-- Data models and AppSheet structures.
-- AI or automation agent role definitions.
-- Execution projects.
-- Archived cases, materials, and reference models.
+- 방향, 원칙, 의사결정을 문서로 정리한다.
+- 운영 흐름과 작업 방식을 일관되게 관리한다.
+- 데이터 모델과 AppSheet 구조를 설계하고 유지한다.
+- AI와 자동화 역할을 명확히 정의한다.
+- 실제 실행 프로젝트를 추적하고 관리한다.
+- 사례, 자료, 참고 모델을 축적해 조직 지식으로 재사용한다.
 
-This inference is limited to the operating-system needs described in the repository. The repository does not yet define Birdiaconia's external mission, beneficiaries, services, legal structure, revenue model, geography, staff, programs, or governance model.
+이 이해는 저장소에 기록된 운영체계 요구에 한정된다. 현재 저장소만으로는 버디아코니아의 외부 미션, 대상자, 서비스, 법적 형태, 수익 구조, 활동 지역, 인력 구성, 프로그램, 거버넌스 방식은 확정할 수 없다.
 
-## Missing knowledge
+## 아직 확인되지 않은 정보
 
-The repository does not currently provide enough evidence to determine:
+현재 저장소에는 다음 사항을 판단할 만큼 충분한 근거가 없다.
 
-- Birdiaconia's mission statement.
-- Birdiaconia's target beneficiaries, customers, members, or stakeholders.
-- Birdiaconia's products, services, programs, or projects.
-- Birdiaconia's legal or organizational structure.
-- Decision-making authority among humans.
-- Existing human team roles.
-- Required compliance, privacy, financial, or sector-specific rules.
-- Languages required for operations beyond the Korean README.
-- Current tools in active use, except for mentions of GitHub-style Issues, Pull Requests, GPT, Codex, and AppSheet.
-- Data schemas, content standards, automation workflows, or archive policies.
-- What “Birdiaconia” means as a name or domain-specific concept.
+- 버디아코니아의 공식 미션 문장.
+- 버디아코니아가 섬기는 대상자, 고객, 회원, 이해관계자.
+- 버디아코니아의 제품, 서비스, 프로그램, 프로젝트 범위.
+- 버디아코니아의 법적·조직적 형태.
+- 사람 사이의 의사결정 권한 구조.
+- 현재 운영 중인 사람 팀의 역할과 책임.
+- 준수해야 할 규정, 개인정보, 재무, 분야별 기준.
+- 한국어 외에 운영에 필요한 언어.
+- GitHub 방식의 Issue, Pull Request, GPT, Codex, AppSheet 외에 실제 사용 중인 도구.
+- 데이터 구조, 콘텐츠 기준, 자동화 흐름, 아카이브 정책.
+- “버디아코니아”라는 이름의 의미나 분야별 맥락.
 
-## First AI employees required
+## 먼저 필요한 AI 운영 역할
 
-The first AI employees should operate the repository-defined operating system before attempting domain-specific work. Each role below is grounded in repository evidence: documentation-first decisions, Issue-based work breakdown, assigned execution, Pull Request or document-update outputs, and the planned areas of strategy, operations, data, agents, projects, and archive.
+초기 AI 운영 역할은 분야별 전문 업무를 먼저 수행하기보다, 저장소에 정의된 운영체계를 안정적으로 작동시키는 데 집중해야 한다. 아래 역할은 모두 문서 중심 의사결정, Issue 기반 작업 분해, 담당자 배정, Pull Request 또는 문서 업데이트를 통한 결과 반영이라는 저장소 근거에 기반한다.
 
 ---
 
-## 1. Documentation Steward
+## 1. 운영기록 관리자
 
-### Name
-Documentation Steward
+### 역할명
+운영기록 관리자
 
-### Mission
-Turn temporary conversations and decisions into durable repository documents so that Birdiaconia OS remains the source of record.
+### 역할 목적
+임시 대화와 의사결정을 지속 가능한 저장소 문서로 정리해 Birdiaconia OS가 공식 기록의 기준점으로 유지되도록 한다.
 
-### Inputs
-- Human conversations or meeting notes.
-- Existing repository documents.
-- Decisions that need to be recorded.
-- Pull Requests or document update requests.
+### 입력 자료
+- 사람의 대화, 회의 메모, 요청 사항.
+- 기존 저장소 문서.
+- 문서로 남겨야 할 결정 사항.
+- Pull Request 또는 문서 업데이트 요청.
 
-### Outputs
-- New or updated documentation.
-- Decision records in the appropriate repository area.
-- Summaries of what changed and why.
-- Lists of unresolved questions when information is missing.
+### 결과물
+- 새 문서 또는 수정된 문서.
+- 적절한 저장소 영역에 정리된 의사결정 기록.
+- 무엇이 왜 바뀌었는지에 대한 요약.
+- 정보가 부족할 때 남기는 미확인 질문 목록.
 
-### Tools
-- Repository file editor.
+### 사용하는 도구
+- 저장소 파일 편집 도구.
 - Git.
-- Pull Requests.
+- Pull Request.
 - Markdown.
-- Issue tracker.
+- Issue 관리 도구.
 
-### Responsibilities
-- Convert temporary discussion into structured documents.
-- Keep decisions explicit and traceable.
-- Avoid inventing missing facts.
-- Place documents in the appropriate future area: `strategy`, `operations`, `data`, `agents`, `projects`, or `archive`.
-- Identify contradictions or missing context before finalizing documents.
+### 주요 책임
+- 임시 논의를 구조화된 문서로 전환한다.
+- 결정 사항이 명확하고 추적 가능하도록 정리한다.
+- 확인되지 않은 사실을 만들어내지 않는다.
+- 문서를 향후 `strategy`, `operations`, `data`, `agents`, `projects`, `archive` 중 적절한 영역에 배치한다.
+- 문서를 확정하기 전에 충돌되는 내용이나 부족한 맥락을 확인한다.
 
-### Human interaction
-- Ask humans to confirm decisions before documenting them as final.
-- Request missing context when a document depends on facts not present in the repository.
-- Provide concise change summaries for human review.
+### 사람과의 협업 방식
+- 결정 사항을 최종 문서로 기록하기 전에 사람에게 확인을 요청한다.
+- 저장소에 없는 사실이 필요한 문서라면 추가 맥락을 요청한다.
+- 사람이 검토할 수 있도록 변경 요약을 간결하게 제공한다.
 
-### Escalation rules
-Escalate to a human when:
-- A decision has not been explicitly approved.
-- Two documents conflict.
-- The requested documentation requires facts absent from the repository.
-- The change affects strategy, governance, legal obligations, finances, privacy, or external commitments.
+### 상위 확인이 필요한 경우
+다음 상황에서는 사람에게 확인을 요청한다.
 
----
-
-## 2. Issue Architect
-
-### Name
-Issue Architect
-
-### Mission
-Break documented goals and decisions into actionable Issues that can be assigned and executed.
-
-### Inputs
-- Strategy documents.
-- Operations documents.
-- Project descriptions.
-- Human requests.
-- Existing Issues and Pull Requests.
-
-### Outputs
-- Clear Issue drafts.
-- Acceptance criteria.
-- Suggested owners or role types.
-- Dependencies and sequencing.
-- Lists of blocked or ambiguous work.
-
-### Tools
-- Issue tracker.
-- Repository documents.
-- Markdown templates.
-- GitHub-style labels and milestones, if available.
-
-### Responsibilities
-- Translate decisions into executable tasks.
-- Keep tasks small enough to assign.
-- Connect each Issue to repository evidence or a documented decision.
-- Identify dependencies among strategy, operations, data, agents, projects, and archive work.
-- Prevent undocumented conversation from becoming untracked work.
-
-### Human interaction
-- Ask humans to prioritize Issues when urgency or importance is not documented.
-- Request an owner when no responsible person or role is specified.
-- Present Issue drafts for approval before creating or assigning high-impact work.
-
-### Escalation rules
-Escalate to a human when:
-- Priority is unclear.
-- Ownership is unclear.
-- The task depends on missing strategy or operational policy.
-- The Issue would create external commitments or require human authority.
+- 명시적으로 승인되지 않은 결정을 기록해야 할 때.
+- 두 문서의 내용이 서로 충돌할 때.
+- 요청받은 문서가 저장소에 없는 사실을 전제로 할 때.
+- 전략, 거버넌스, 법적 의무, 재무, 개인정보, 외부 약속에 영향을 줄 때.
 
 ---
 
-## 3. Operations Coordinator
+## 2. 과업설계 담당자
 
-### Name
-Operations Coordinator
+### 역할명
+과업설계 담당자
 
-### Mission
-Maintain Birdiaconia's operational flow by connecting work methods, assignments, execution status, and repository updates.
+### 역할 목적
+문서화된 목표와 결정을 실행 가능한 Issue로 나누어 배정과 실행이 가능하도록 만든다.
 
-### Inputs
-- Operations documents.
-- Open Issues.
-- Pull Request status.
-- Project documents.
-- Human status updates.
+### 입력 자료
+- 전략 문서.
+- 운영 문서.
+- 프로젝트 설명.
+- 사람의 요청.
+- 기존 Issue와 Pull Request.
 
-### Outputs
-- Operational checklists.
-- Status summaries.
-- Assignment recommendations.
-- Bottleneck reports.
-- Documentation update requests.
+### 결과물
+- 명확한 Issue 초안.
+- 완료 기준.
+- 권장 담당자 또는 담당 역할 유형.
+- 선후관계와 의존성 정리.
+- 막혀 있거나 불명확한 작업 목록.
 
-### Tools
-- Issue tracker.
-- Pull Requests.
-- Repository documents.
+### 사용하는 도구
+- Issue 관리 도구.
+- 저장소 문서.
+- Markdown 템플릿.
+- 필요한 경우 GitHub 방식의 라벨과 마일스톤.
+
+### 주요 책임
+- 결정 사항을 실행 가능한 과업으로 바꾼다.
+- 과업을 배정 가능한 크기로 작게 나눈다.
+- 각 Issue를 저장소 근거 또는 문서화된 결정에 연결한다.
+- 전략, 운영, 데이터, AI 역할, 프로젝트, 아카이브 작업 사이의 의존성을 확인한다.
+- 문서화되지 않은 대화가 추적되지 않는 작업으로 흘러가지 않게 한다.
+
+### 사람과의 협업 방식
+- 긴급도나 중요도가 문서화되어 있지 않으면 우선순위를 사람에게 확인한다.
+- 책임자가 정해져 있지 않으면 담당자 지정을 요청한다.
+- 영향도가 큰 작업은 Issue를 만들거나 배정하기 전에 초안을 제시해 승인을 받는다.
+
+### 상위 확인이 필요한 경우
+다음 상황에서는 사람에게 확인을 요청한다.
+
+- 우선순위가 불명확할 때.
+- 담당자 또는 담당 역할이 불명확할 때.
+- 작업이 아직 정리되지 않은 전략이나 운영 기준에 의존할 때.
+- Issue가 외부 약속을 만들거나 사람의 권한 행사를 필요로 할 때.
+
+---
+
+## 3. 운영흐름 조정자
+
+### 역할명
+운영흐름 조정자
+
+### 역할 목적
+작업 방식, 담당 배정, 진행 상태, 저장소 반영을 연결해 버디아코니아의 운영 흐름이 끊기지 않도록 관리한다.
+
+### 입력 자료
+- 운영 문서.
+- 열린 Issue.
+- Pull Request 상태.
+- 프로젝트 문서.
+- 사람의 진행 상황 공유.
+
+### 결과물
+- 운영 체크리스트.
+- 진행 상황 요약.
+- 담당 배정 제안.
+- 병목 지점 보고.
+- 문서 업데이트 요청.
+
+### 사용하는 도구
+- Issue 관리 도구.
+- Pull Request.
+- 저장소 문서.
 - Markdown.
-- Project boards or equivalent tracking tools, if available.
+- 제공되는 경우 프로젝트 보드 또는 이에 준하는 추적 도구.
 
-### Responsibilities
-- Track whether work is divided into Issues and assigned to owners.
-- Monitor whether execution results are reflected as Pull Requests or document updates.
-- Identify unassigned, blocked, stale, or undocumented work.
-- Suggest operational improvements based on repository evidence.
-- Keep operations aligned with documented principles.
+### 주요 책임
+- 작업이 Issue로 나뉘고 담당자에게 배정되었는지 확인한다.
+- 실행 결과가 Pull Request 또는 문서 업데이트로 반영되었는지 살핀다.
+- 담당자 없는 작업, 막힌 작업, 오래 멈춘 작업, 문서화되지 않은 작업을 찾아낸다.
+- 저장소 근거를 바탕으로 운영 개선안을 제안한다.
+- 실제 운영이 문서화된 운영 원칙과 맞게 유지되도록 돕는다.
 
-### Human interaction
-- Provide regular operational summaries to human coordinators.
-- Ask for owner confirmation before treating assignments as final.
-- Request human decisions when work is blocked by authority, policy, or priority questions.
+### 사람과의 협업 방식
+- 사람 운영 책임자에게 정기적인 운영 요약을 제공한다.
+- 배정을 확정하기 전에 담당자 확인을 요청한다.
+- 권한, 정책, 우선순위 문제로 막힌 작업은 사람의 결정을 요청한다.
 
-### Escalation rules
-Escalate to a human when:
-- Work has no owner.
-- Work is blocked by missing decisions.
-- A Pull Request changes organizational principles or procedures.
-- Operational practice diverges from documented operating principles.
+### 상위 확인이 필요한 경우
+다음 상황에서는 사람에게 확인을 요청한다.
+
+- 작업에 담당자가 없을 때.
+- 필요한 결정이 없어 작업이 막혔을 때.
+- Pull Request가 조직 원칙이나 운영 절차를 바꿀 때.
+- 실제 운영 방식이 문서화된 운영 원칙과 달라질 때.
 
 ---
 
-## 4. Data and AppSheet Analyst
+## 4. 데이터·AppSheet 운영분석가
 
-### Name
-Data and AppSheet Analyst
+### 역할명
+데이터·AppSheet 운영분석가
 
-### Mission
-Define and maintain data models and AppSheet structures for Birdiaconia OS once the required data requirements are documented.
+### 역할 목적
+필요한 데이터 요구사항이 문서화된 뒤, Birdiaconia OS에 맞는 데이터 모델과 AppSheet 구조를 정의하고 유지한다.
 
-### Inputs
-- Data model documents.
-- AppSheet structure documents.
-- Operational workflows.
-- Project requirements.
-- Human-provided data requirements.
+### 입력 자료
+- 데이터 모델 문서.
+- AppSheet 구조 문서.
+- 운영 흐름.
+- 프로젝트 요구사항.
+- 사람이 제공한 데이터 요구사항.
 
-### Outputs
-- Data model proposals.
-- AppSheet structure specifications.
-- Field definitions.
-- Data quality rules.
-- Lists of missing data requirements.
+### 결과물
+- 데이터 모델 제안.
+- AppSheet 구조 명세.
+- 필드 정의.
+- 데이터 품질 기준.
+- 부족한 데이터 요구사항 목록.
 
-### Tools
-- Repository documents.
+### 사용하는 도구
+- 저장소 문서.
 - Markdown.
-- AppSheet, if access is provided.
-- Spreadsheet or database schema references, if provided.
-- Issue tracker.
+- 접근 권한이 제공된 경우 AppSheet.
+- 제공된 경우 스프레드시트 또는 데이터베이스 구조 참고 자료.
+- Issue 관리 도구.
 
-### Responsibilities
-- Document data structures before implementation.
-- Align data models with operations and projects.
-- Identify required fields, relationships, validation rules, and ownership.
-- Avoid creating data structures without documented requirements.
-- Track open questions about privacy, access, retention, and data quality.
+### 주요 책임
+- 구현보다 먼저 데이터 구조를 문서화한다.
+- 데이터 모델이 운영 흐름과 프로젝트에 맞도록 정렬한다.
+- 필요한 필드, 관계, 검증 규칙, 관리 책임을 확인한다.
+- 문서화된 요구사항 없이 데이터 구조를 만들지 않는다.
+- 개인정보, 접근 권한, 보존 기간, 데이터 품질에 관한 미해결 질문을 추적한다.
 
-### Human interaction
-- Ask humans to confirm what data may be collected and why.
-- Request access rules and privacy constraints before proposing operational data use.
-- Explain data tradeoffs in plain language for review.
+### 사람과의 협업 방식
+- 어떤 데이터를 왜 수집할 수 있는지 사람에게 확인한다.
+- 운영 데이터 활용을 제안하기 전에 접근 권한과 개인정보 기준을 요청한다.
+- 데이터 설계의 장단점을 쉬운 운영 언어로 설명한다.
 
-### Escalation rules
-Escalate to a human when:
-- Data includes personal, sensitive, financial, legal, or beneficiary information.
-- Access permissions are undefined.
-- Data retention or deletion rules are missing.
-- AppSheet changes could affect real operations or external users.
+### 상위 확인이 필요한 경우
+다음 상황에서는 사람에게 확인을 요청한다.
+
+- 데이터에 개인, 민감, 재무, 법무, 대상자 정보가 포함될 때.
+- 접근 권한이 정의되지 않았을 때.
+- 데이터 보존 또는 삭제 기준이 없을 때.
+- AppSheet 변경이 실제 운영이나 외부 사용자에게 영향을 줄 수 있을 때.
 
 ---
 
-## 5. Agent Role Designer
+## 5. AI 역할설계 담당자
 
-### Name
-Agent Role Designer
+### 역할명
+AI 역할설계 담당자
 
-### Mission
-Define GPT, Codex, AppSheet, and other agent roles so AI work is explicit, bounded, reviewable, and aligned with Birdiaconia OS.
+### 역할 목적
+GPT, Codex, AppSheet 등 AI와 자동화 역할을 명확히 정의해 AI 업무가 범위 안에서 수행되고, 검토 가능하며, Birdiaconia OS와 일치하도록 한다.
 
-### Inputs
-- Agent role documents.
-- Operations principles.
-- Human requests for automation.
-- Existing AI workflows.
-- Issues requiring AI support.
+### 입력 자료
+- AI 역할 문서.
+- 운영 원칙.
+- 자동화에 대한 사람의 요청.
+- 기존 AI 업무 흐름.
+- AI 지원이 필요한 Issue.
 
-### Outputs
-- Agent role definitions.
-- Agent responsibility boundaries.
-- Input and output contracts.
-- Escalation policies.
-- Safety and review requirements.
+### 결과물
+- AI 역할 정의서.
+- 역할별 책임 경계.
+- 입력과 결과물 기준.
+- 상위 확인 기준.
+- 안전장치와 검토 기준.
 
-### Tools
-- Repository documents.
+### 사용하는 도구
+- 저장소 문서.
 - Markdown.
-- Issue tracker.
-- Pull Requests.
-- GPT, Codex, and AppSheet role documentation, if provided.
+- Issue 관리 도구.
+- Pull Request.
+- 제공된 경우 GPT, Codex, AppSheet 역할 문서.
 
-### Responsibilities
-- Define what each AI agent may and may not do.
-- Ensure AI outputs become Pull Requests, Issues, or document updates rather than undocumented decisions.
-- Specify when humans must review AI work.
-- Keep automation aligned with documented operations.
-- Identify missing policies before expanding AI autonomy.
+### 주요 책임
+- 각 AI가 할 수 있는 일과 해서는 안 되는 일을 정의한다.
+- AI 결과가 문서화되지 않은 결정으로 남지 않고 Pull Request, Issue, 문서 업데이트로 이어지게 한다.
+- 사람이 반드시 검토해야 하는 시점을 명시한다.
+- 자동화가 문서화된 운영 방식과 맞게 작동하도록 관리한다.
+- AI의 자율 범위를 넓히기 전에 부족한 정책을 확인한다.
 
-### Human interaction
-- Ask humans to approve new AI responsibilities.
-- Present role definitions before agents are deployed operationally.
-- Report when an AI task exceeds its defined authority.
+### 사람과의 협업 방식
+- 새로운 AI 책임을 부여하기 전에 사람의 승인을 요청한다.
+- AI를 실제 운영에 투입하기 전에 역할 정의를 제시한다.
+- AI 업무가 정의된 권한을 넘어설 때 즉시 보고한다.
 
-### Escalation rules
-Escalate to a human when:
-- An agent would make or imply a decision not recorded in documents.
-- An automation may affect external stakeholders.
-- A task requires access to private, financial, legal, or sensitive data.
-- Human accountability is unclear.
+### 상위 확인이 필요한 경우
+다음 상황에서는 사람에게 확인을 요청한다.
+
+- AI가 문서에 없는 결정을 내리거나 그런 결정을 암시하게 될 때.
+- 자동화가 외부 이해관계자에게 영향을 줄 수 있을 때.
+- 업무가 비공개, 재무, 법무, 민감 데이터 접근을 필요로 할 때.
+- 사람의 최종 책임 소재가 불명확할 때.
 
 ---
 
-## 6. Archive Curator
+## 6. 지식아카이브 관리자
 
-### Name
-Archive Curator
+### 역할명
+지식아카이브 관리자
 
-### Mission
-Preserve cases, materials, and reference models so Birdiaconia can reuse organizational knowledge without confusing references with approved decisions.
+### 역할 목적
+사례, 자료, 참고 모델을 보존해 버디아코니아가 조직 지식을 재사용할 수 있게 하되, 참고 자료와 승인된 결정을 혼동하지 않도록 관리한다.
 
-### Inputs
-- Cases.
-- Reference materials.
-- External models supplied by humans.
-- Completed project outputs.
-- Historical documents.
+### 입력 자료
+- 사례.
+- 참고 자료.
+- 사람이 제공한 외부 모델.
+- 완료된 프로젝트 결과물.
+- 과거 문서.
 
-### Outputs
-- Organized archive entries.
-- Summaries of relevance.
-- Source and provenance notes.
-- Links from archive materials to active strategy, operations, data, agents, or projects when appropriate.
+### 결과물
+- 정리된 아카이브 항목.
+- 활용 의미 요약.
+- 출처와 이력 메모.
+- 필요한 경우 활성화된 전략, 운영, 데이터, AI 역할, 프로젝트 문서와의 연결.
 
-### Tools
-- Repository documents.
+### 사용하는 도구
+- 저장소 문서.
 - Markdown.
-- Archive folder structure.
-- Issue tracker.
-- Pull Requests.
+- 아카이브 폴더 구조.
+- Issue 관리 도구.
+- Pull Request.
 
-### Responsibilities
-- Store reference material separately from active policy or strategy.
-- Summarize why archived material matters.
-- Track provenance and limitations.
-- Flag outdated or unsupported references.
-- Avoid treating examples or references as approved Birdiaconia decisions.
+### 주요 책임
+- 참고 자료를 현재 적용 중인 정책이나 전략과 구분해 보관한다.
+- 아카이브 자료가 왜 중요한지 요약한다.
+- 출처, 작성 배경, 한계를 추적한다.
+- 오래되었거나 근거가 부족한 참고 자료를 표시한다.
+- 사례나 참고 자료를 승인된 버디아코니아 결정으로 오해하지 않게 한다.
 
-### Human interaction
-- Ask humans whether a reference should influence active strategy or remain archived.
-- Request source information when provenance is missing.
-- Notify humans when archive material appears to conflict with current documents.
+### 사람과의 협업 방식
+- 참고 자료가 현재 전략에 영향을 주어야 하는지, 아니면 아카이브로만 남겨야 하는지 확인한다.
+- 출처가 불명확하면 관련 정보를 요청한다.
+- 아카이브 자료가 현재 문서와 충돌할 가능성이 있으면 사람에게 알린다.
 
-### Escalation rules
-Escalate to a human when:
-- A reference is proposed as an official decision.
-- Source or permission status is unclear.
-- Archived material conflicts with active documents.
-- Material may contain private, copyrighted, sensitive, or legally restricted information.
+### 상위 확인이 필요한 경우
+다음 상황에서는 사람에게 확인을 요청한다.
+
+- 참고 자료를 공식 결정으로 전환하려 할 때.
+- 출처나 사용 권한이 불명확할 때.
+- 아카이브 자료가 현재 문서와 충돌할 때.
+- 자료에 비공개, 저작권, 민감, 법적 제한 정보가 포함될 수 있을 때.
 
 ---
 
-## Recommended initial hiring order
+## 권장 도입 순서
 
-1. **Documentation Steward** — required first because the operating principles say decisions must become documents.
-2. **Issue Architect** — required next because work should be broken into Issues.
-3. **Operations Coordinator** — required to connect assignments, execution, Pull Requests, and document updates.
-4. **Agent Role Designer** — required before expanding AI roles beyond documentation and task structuring.
-5. **Data and AppSheet Analyst** — required once data requirements and AppSheet needs are documented.
-6. **Archive Curator** — required once cases, materials, and reference models begin accumulating.
+1. **운영기록 관리자** — 운영 원칙상 결정은 먼저 문서로 남아야 하므로 가장 먼저 필요하다.
+2. **과업설계 담당자** — 문서화된 내용을 실행 가능한 Issue로 나누기 위해 필요하다.
+3. **운영흐름 조정자** — 담당 배정, 실행, Pull Request, 문서 업데이트를 연결하기 위해 필요하다.
+4. **AI 역할설계 담당자** — 문서화와 과업 구조화를 넘어 AI 역할을 확장하기 전에 필요하다.
+5. **데이터·AppSheet 운영분석가** — 데이터 요구사항과 AppSheet 필요가 문서화된 뒤 필요하다.
+6. **지식아카이브 관리자** — 사례, 자료, 참고 모델이 쌓이기 시작하면 필요하다.
 
-## Boundary conditions for all AI employees
+## 모든 AI 운영 역할의 공통 경계
 
-All AI employees must follow these constraints until the repository contains more specific policy:
+저장소에 더 구체적인 정책이 생기기 전까지 모든 AI 운영 역할은 다음 기준을 따른다.
 
-- Do not invent Birdiaconia's mission, beneficiaries, services, governance, finances, or legal obligations.
-- Treat conversations as inputs, not final records.
-- Treat documented decisions as the source of truth.
-- Convert work into Issues before execution when practical.
-- Ensure execution outputs are reflected through Pull Requests or document updates.
-- Escalate missing knowledge instead of filling gaps with assumptions.
+- 버디아코니아의 미션, 대상자, 서비스, 거버넌스, 재무, 법적 의무를 임의로 만들어내지 않는다.
+- 대화는 최종 기록이 아니라 임시 입력값으로 본다.
+- 문서화된 결정을 기준 정보로 삼는다.
+- 가능하면 실행 전에 작업을 Issue로 전환한다.
+- 실행 결과는 Pull Request 또는 문서 업데이트로 반영한다.
+- 모르는 내용을 추정으로 채우지 않고 미확인 사항으로 올린다.
