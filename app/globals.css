@@ -9,6 +9,7 @@
   --accent: #1f4d3a;
   --accent-soft: #e5f0e9;
   --amber-soft: #fff5db;
+  --blue-soft: #edf4ff;
   --shadow: 0 18px 56px rgba(35, 45, 57, 0.08);
   --radius-xl: 28px;
   --radius-lg: 20px;
@@ -111,6 +112,39 @@ h1 {
 h2 { margin-bottom: 0; font-size: clamp(21px, 3vw, 28px); letter-spacing: -0.04em; }
 p { line-height: 1.55; }
 .page-header p:last-child { max-width: 760px; margin-bottom: 0; color: var(--muted); font-size: 17px; }
+.integration-note {
+  display: inline-flex;
+  width: fit-content;
+  margin: 14px 0 0;
+  padding: 10px 12px;
+  border: 1px solid rgba(31, 77, 58, 0.14);
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 750;
+}
+
+.operation-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--panel-strong), var(--blue-soft));
+  box-shadow: 0 12px 32px rgba(35, 45, 57, 0.05);
+}
+.operation-flow span {
+  border-radius: 999px;
+  background: #fff;
+  color: #344054;
+  font-size: 13px;
+  font-weight: 800;
+  padding: 8px 12px;
+}
+.operation-flow strong { color: var(--accent); }
 
 .card-grid, .today-room-grid { display: grid; gap: 14px; }
 .today-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
@@ -124,6 +158,7 @@ p { line-height: 1.55; }
 .summary-card span { color: #475467; font-size: 14px; font-weight: 760; }
 .summary-card strong { display: block; margin: 10px 0 4px; font-size: 38px; letter-spacing: -0.06em; }
 .summary-card p, .flow-row p { margin-bottom: 0; color: var(--muted); }
+.flow-row .next-step { color: var(--accent); font-weight: 700; }
 
 .today-room-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
 .room-card { display: grid; gap: 12px; padding: 18px; }
@@ -144,7 +179,7 @@ p { line-height: 1.55; }
   align-items: start;
   column-gap: 12px;
 }
-.source-badge, .time-chip {
+.source-badge, .time-chip, .object-link {
   width: fit-content;
   border-radius: 999px;
   font-size: 12px;
@@ -152,6 +187,7 @@ p { line-height: 1.55; }
   line-height: 1;
 }
 .source-badge { padding: 7px 9px; background: #f2f4f7; color: #475467; }
+.object-link { display: inline-flex; padding: 5px 7px; background: var(--blue-soft); color: #175cd3; }
 .time-chip { padding: 8px 10px; background: var(--accent); color: #fff; }
 
 @media (max-width: 1080px) {
