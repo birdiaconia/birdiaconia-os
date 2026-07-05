@@ -1,0 +1,37 @@
+<svg width="1440" height="960" viewBox="0 0 1440 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1440" height="960" fill="#F4EFE7"/>
+  <circle cx="116" cy="112" r="260" fill="#E9B44C" fill-opacity="0.24"/>
+  <rect x="110" y="86" width="1220" height="428" rx="36" fill="white" fill-opacity="0.82" stroke="#D9D4CA"/>
+  <text x="154" y="154" fill="#1F6F61" font-family="Arial, sans-serif" font-size="24" font-weight="700">Birdiaconia / 버디아코니아</text>
+  <text x="154" y="204" fill="#1D2A27" font-family="Arial, sans-serif" font-size="42" font-weight="800">Workspace v0.1 UI Prototype</text>
+  <rect x="1042" y="126" width="206" height="56" rx="28" fill="#1F6F61" fill-opacity="0.12"/>
+  <text x="1074" y="162" fill="#12453E" font-family="Arial, sans-serif" font-size="20" font-weight="700">Mock 데이터 전용</text>
+  <text x="154" y="306" fill="#1F6F61" font-family="Arial, sans-serif" font-size="20" font-weight="800">사역 운영실</text>
+  <text x="154" y="374" fill="#1D2A27" font-family="Arial, sans-serif" font-size="58" font-weight="900">하루의 사역 흐름을</text>
+  <text x="154" y="440" fill="#1D2A27" font-family="Arial, sans-serif" font-size="58" font-weight="900">한 화면에서 살핍니다</text>
+  <rect x="898" y="252" width="350" height="214" rx="30" fill="#1F6F61"/>
+  <text x="940" y="326" fill="white" font-family="Arial, sans-serif" font-size="30" font-weight="800">연동 없는 프로토타입</text>
+  <text x="940" y="378" fill="#EAF6F2" font-family="Arial, sans-serif" font-size="22">GitHub API · AppSheet · Sheets</text>
+  <text x="940" y="416" fill="#EAF6F2" font-family="Arial, sans-serif" font-size="22">연동 없이 샘플 데이터만 사용</text>
+  <g>
+    <rect x="110" y="546" width="386" height="174" rx="28" fill="white" fill-opacity="0.82" stroke="#D9D4CA"/>
+    <text x="146" y="610" fill="#9A6513" font-family="Arial, sans-serif" font-size="22" font-weight="800">운영</text>
+    <text x="146" y="662" fill="#1D2A27" font-family="Arial, sans-serif" font-size="30" font-weight="800">오늘의 사역 흐름</text>
+    <text x="146" y="700" fill="#65746F" font-family="Arial, sans-serif" font-size="20">7개 진행 중</text>
+  </g>
+  <g>
+    <rect x="527" y="546" width="386" height="174" rx="28" fill="white" fill-opacity="0.82" stroke="#D9D4CA"/>
+    <text x="563" y="610" fill="#9A6513" font-family="Arial, sans-serif" font-size="22" font-weight="800">케어</text>
+    <text x="563" y="662" fill="#1D2A27" font-family="Arial, sans-serif" font-size="30" font-weight="800">공동체 돌봄</text>
+    <text x="563" y="700" fill="#65746F" font-family="Arial, sans-serif" font-size="20">12명 확인 필요</text>
+  </g>
+  <g>
+    <rect x="944" y="546" width="386" height="174" rx="28" fill="white" fill-opacity="0.82" stroke="#D9D4CA"/>
+    <text x="980" y="610" fill="#9A6513" font-family="Arial, sans-serif" font-size="22" font-weight="800">문서</text>
+    <text x="980" y="662" fill="#1D2A27" font-family="Arial, sans-serif" font-size="30" font-weight="800">정책 아카이브</text>
+    <text x="980" y="700" fill="#65746F" font-family="Arial, sans-serif" font-size="20">4건 검토 대기</text>
+  </g>
+  <rect x="110" y="752" width="1220" height="126" rx="28" fill="white" fill-opacity="0.82" stroke="#D9D4CA"/>
+  <text x="154" y="812" fill="#1F6F61" font-family="Arial, sans-serif" font-size="22" font-weight="800">오늘의 일정</text>
+  <text x="154" y="850" fill="#1D2A27" font-family="Arial, sans-serif" font-size="32" font-weight="800">09:00 아침 운영 브리핑 · 11:30 돌봄 대상자 상태 점검 · 17:00 저녁 사역 회고</text>
+</svg>
