@@ -13,25 +13,44 @@ export const bisAgents: BISAgent[] = [
   {
     name: "Research AI",
     role: "Collects and organizes research objects, field evidence, public data, and reference materials.",
-    inputs: ["Research Objects", "field evidence", "public data", "reference materials"],
+    inputs: [
+      "Research Objects",
+      "field evidence",
+      "public data",
+      "reference materials",
+    ],
     outputs: ["research briefs", "source maps", "evidence summaries"],
     exampleCommand: "Create an evidence summary for the housing pilot using Research Objects and field notes.",
+    exampleCommand:
+      "Create an evidence summary using Research Objects and field notes.",
     status: "Active",
   },
   {
     name: "Policy AI",
     role: "Converts field problems and research into policy logic.",
-    inputs: ["field problems", "research briefs", "Workflow Standards", "government requirements"],
+    inputs: [
+      "field problems",
+      "research briefs",
+      "Workflow Standards",
+      "government requirements",
+    ],
     outputs: ["policy briefs", "ordinance drafts", "government-facing reports"],
-    exampleCommand: "Draft a policy brief from the latest field problem log and research brief.",
+    exampleCommand:
+      "Draft a policy brief from the latest field problem log and research brief.",
     status: "Draft",
   },
   {
     name: "Funding AI",
     role: "Structures grant applications, budgets, funding calendars, and proposal packages.",
-    inputs: ["funding notices", "budget data", "project plans", "GitHub issues"],
+    inputs: [
+      "funding notices",
+      "budget data",
+      "project plans",
+      "GitHub issues",
+    ],
     outputs: ["grant proposals", "budget tables", "funding strategy memos"],
-    exampleCommand: "Build a grant proposal package from the pilot plan and budget table.",
+    exampleCommand:
+      "Build a grant proposal package from the pilot plan and budget table.",
     status: "Needs Data",
   },
   {
@@ -40,6 +59,19 @@ export const bisAgents: BISAgent[] = [
     inputs: ["Mission Control priorities", "field sites", "AppSheet records", "execution standards"],
     outputs: ["pilot plans", "execution checklists", "field logs", "evaluation notes"],
     exampleCommand: "Create a 30-day pilot execution checklist for the community care test.",
+    inputs: [
+      "Mission Control priorities",
+      "field sites",
+      "AppSheet records",
+      "execution standards",
+    ],
+    outputs: [
+      "pilot plans",
+      "execution checklists",
+      "field logs",
+      "evaluation notes",
+    ],
+    exampleCommand: "Create a 30-day pilot execution checklist.",
     status: "Active",
   },
   {
@@ -48,6 +80,8 @@ export const bisAgents: BISAgent[] = [
     inputs: ["Google Sheets", "AppSheet", "GitHub issues", "Research Objects"],
     outputs: ["dashboards", "indicators", "summaries", "data quality checks"],
     exampleCommand: "Check AppSheet records for missing pilot status and owner fields.",
+    exampleCommand:
+      "Check AppSheet records for missing status and owner fields.",
     status: "Needs Data",
   },
   {
@@ -56,14 +90,35 @@ export const bisAgents: BISAgent[] = [
     inputs: ["briefs", "case notes", "strategy memos", "approved templates"],
     outputs: ["PDF", "PPT", "Word", "reports", "proposals", "manuals", "templates"],
     exampleCommand: "Turn the policy brief into a PDF report and PPT deck outline.",
+    outputs: [
+      "PDF",
+      "PPT",
+      "Word",
+      "reports",
+      "proposals",
+      "manuals",
+      "templates",
+    ],
+    exampleCommand: "Turn the policy brief into a PDF report and PPT outline.",
     status: "Active",
   },
   {
     name: "Community AI",
     role: "Manages volunteer, resident, partner, and local community engagement logic.",
-    inputs: ["community contacts", "resident needs", "partner records", "participation logs"],
-    outputs: ["recruitment plans", "community maps", "participation records", "communication drafts"],
-    exampleCommand: "Map partner roles and draft a resident participation message.",
+    inputs: [
+      "community contacts",
+      "resident needs",
+      "partner records",
+      "participation logs",
+    ],
+    outputs: [
+      "recruitment plans",
+      "community maps",
+      "participation records",
+      "communication drafts",
+    ],
+    exampleCommand:
+      "Map partner roles and draft a resident participation message.",
     status: "Draft",
   },
   {
@@ -72,29 +127,60 @@ export const bisAgents: BISAgent[] = [
     inputs: ["case records", "assessment notes", "service plans", "monitoring data"],
     outputs: ["case summaries", "service plans", "monitoring notes", "evaluation reports"],
     exampleCommand: "Summarize this welfare case record into a service plan and monitoring checklist.",
+    inputs: [
+      "case records",
+      "assessment notes",
+      "service plans",
+      "monitoring data",
+    ],
+    outputs: [
+      "case summaries",
+      "service plans",
+      "monitoring notes",
+      "evaluation reports",
+    ],
+    exampleCommand: "Summarize this welfare case record into a service plan.",
     status: "Needs Data",
   },
   {
     name: "Strategy AI",
     role: "Connects projects, resources, risks, timelines, and decision logic.",
-    inputs: ["Mission Control", "project issues", "resource records", "risk notes"],
+    inputs: [
+      "Mission Control",
+      "project issues",
+      "resource records",
+      "risk notes",
+    ],
     outputs: ["roadmaps", "priority maps", "risk memos", "strategy reports"],
-    exampleCommand: "Create a priority map from current GitHub issues and Mission Control goals.",
+    exampleCommand:
+      "Create a priority map from current GitHub issues and Mission Control goals.",
     status: "Active",
   },
   {
     name: "Executive AI",
     role: "Summarizes the whole operating system for decision-making.",
-    inputs: ["agent outputs", "dashboards", "GitHub activity", "weekly reports"],
-    outputs: ["executive briefs", "weekly reports", "issue summaries", "decision memos"],
-    exampleCommand: "Prepare a weekly executive brief from active pilots, risks, and funding deadlines.",
+    inputs: [
+      "agent outputs",
+      "dashboards",
+      "GitHub activity",
+      "weekly reports",
+    ],
+    outputs: [
+      "executive briefs",
+      "weekly reports",
+      "issue summaries",
+      "decision memos",
+    ],
+    exampleCommand:
+      "Prepare a weekly executive brief from active pilots, risks, and funding deadlines.",
     status: "Draft",
   },
 ];
 
 export const bisSystem = {
   name: "Birdiaconia Intelligence System (BIS)",
-  description: "AI command layer for operating Birdiaconia OS from the Workspace operations room.",
+  description:
+    "AI command layer for operating Birdiaconia OS from the Workspace operations room.",
   operatingLanguage: [
     "GitHub is the backend.",
     "Workspace is the operations room.",
@@ -102,3 +188,6 @@ export const bisSystem = {
     "Outputs include PDF, PPT, Word, grant proposals, policy reports, and field execution documents.",
   ],
 };
+};
+
+export type BISSystem = typeof bisSystem;
