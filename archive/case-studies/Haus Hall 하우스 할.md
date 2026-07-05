@@ -177,32 +177,185 @@
 4. 한국 후보 지역을 정한 뒤 장애인복지, 주거, 직업재활, 평생교육, 보조금 조례와 담당부서를 확인한다.
 5. 버디아코니아가 3개월 안에 시도할 수 있는 최소 파일럿을 “주거 없는 낮활동+일 경험+가족지원” 또는 “지역 파트너 작업장 연계” 중 하나로 구체화한다.
 
-## 11. Generated AI Tasks
+## 11. Research Object Operating Identity
 
-이 연구를 기반으로 후속으로 수행해야 하는 AI 작업을 정리한다. 각 AI는 확인된 사실, 추가 확인 필요 항목, 국내 적용 가능성 판단을 구분하여 다음 작업으로 연결한다.
+이 카드는 사례 보고서가 아니라 버디아코니아 OS에서 사람, AI, AppSheet, Dashboard, 자동화 Workflow가 함께 읽고 갱신하는 **Research Operating Object**이다. Research의 목적은 문서 작성이 아니라 실행 가능한 파일럿을 설계하고, 의사결정 Gate를 통과한 지식만 운영체계에 반영하는 것이다.
 
-| AI 역할 | 작업 | 우선순위 | 예상 결과물 |
-|---------|------|---------|-------------|
-| Research AI | Haus Hall 공식 연차보고서, 정관, 조직 자료를 원문으로 재검토하고 이용자 수, 직원 수, 예산, 재원 비중, 거버넌스 구조를 보완한다. | 높음 | 보완 연구 메모, 핵심 수치 표, 원문 출처 목록 |
-| Policy AI | 한국 후보 지역의 장애인복지, 공동주거, 직업재활, 평생교육, 보조금 관련 법률·조례·담당부서를 최신 원문 기준으로 대조한다. | 높음 | 법률·조례 검토표, 담당기관 문의 목록, 인허가 쟁점 카드 |
-| Funding AI | 중앙정부, 지자체, 민간재단, 사회적경제, 기부·후원 재원을 구분하여 파일럿 단계별 재원 조합을 설계한다. | 높음 | 재원 매핑표, 공모사업 캘린더, 1년 예산 초안 |
-| Data AI | 본 사례 카드의 조사 항목을 AppSheet 또는 내부 데이터베이스에 입력할 수 있도록 필드, 상태값, 출처 관리 구조로 변환한다. | 중간 | AppSheet 데이터 설계안, 필드 정의서, 출처 관리 스키마 |
-| Pilot AI | 버디아코니아가 3개월 안에 실행 가능한 최소 파일럿을 낮활동, 일 경험, 가족지원, 지역 파트너 연계 단위로 구체화한다. | 높음 | 파일럿 운영안, 일정표, 역할분담표, 위험관리 체크리스트 |
-| Output AI | 연구 내용을 정책 브리프, 제안서, 발표자료, 내부 교육자료 등 활용 목적별 문서로 재구성한다. | 중간 | 산출물 패키지 초안, 요약본, 발표용 슬라이드 구조 |
+| 항목 | 운영 정의 | 현재 값 / 규칙 |
+| --- | --- | --- |
+| Object Type | Research Object | 해외 복합 돌봄·생활·일·교육 사례를 국내 파일럿으로 전환하기 위한 운영 객체 |
+| Operating Purpose | Pilot First | Haus Hall을 그대로 복제하지 않고, 버디아코니아가 검증할 최소 실행 단위를 찾는다. |
+| Primary Users | 사람 / AI / AppSheet / Dashboard / Workflow | 사람은 승인과 책임을 맡고, AI는 조사·정리·비교·초안 생성을 맡으며, AppSheet와 Dashboard는 상태·관계·지표를 추적한다. |
+| Human Authority | Decision Gate 승인 | AI는 Gate 통과, 법적 판단 확정, 예산 집행, 파일럿 승인, 확장 결정을 수행하지 않는다. |
+| Automation Boundary | 조사 보조와 Workflow 생성 | 자동화는 누락 항목 감지, 후속 과제 생성, 산출물 초안 작성, 상태 알림까지만 수행한다. |
+| Operating Unit | Pilot Hypothesis 중심 | Research 결과로 Pilot을 만드는 것이 아니라, Pilot Hypothesis를 검증하기 위해 Research를 수행한다. |
 
-## 12. Generated Outputs
+## 12. Research Lifecycle
 
-이 연구 데이터를 활용하여 생성 가능한 산출물을 정리한다. 각 산출물은 원문 출처 확인 상태와 국내 적용 가능성 판단을 함께 표시하여 사용한다.
+| Lifecycle Status | 의미 | 다음 단계 진입 조건 | 필수 기록 | Human Gate |
+| --- | --- | --- | --- | --- |
+| Idea | 사례가 버디아코니아 미션과 연결될 가능성을 발견한 상태 | 대상자, 국가, 주제, 학습 가치가 최소 1개 이상 확인됨 | 사례명, 국가, Theme, Keywords, 최초 출처 | 해당 없음 |
+| Researching | 공식 자료와 2차 자료를 수집하고 사실과 추정을 분리하는 상태 | 핵심 출처, 운영 주체, 프로그램 구조, 국내 적용 쟁점이 초안 수준으로 정리됨 | 출처 목록, 확인 상태, 미확인 항목 | 해당 없음 |
+| Evidence Review | 증거 수준과 출처 신뢰도를 검토하는 상태 | 공식 자료, 연차보고서, 정관, 외부 평가 등 핵심 근거의 원문 확인 범위가 표시됨 | Evidence Level, 출처 한계, 보완 조사 과제 | Gate 1: Research 완료 승인 |
+| Legal Review | 국내 법률·조례·인허가·인권·안전 쟁점을 검토하는 상태 | 법률, 조례, 담당기관, 전문가 검토 필요 항목이 구분됨 | 법률 검토표, 조례 검토표, 문의 대상 | Gate 2: 법률 검토 승인 |
+| Pilot Ready | 제한된 범위의 파일럿을 실행할 수 있도록 목적, 범위, 위험, 예산, 역할을 정리한 상태 | Pilot Hypothesis, 일정, 예산, 담당자, 위험관리 체크리스트가 준비됨 | 파일럿 설계안, KPI, 책임자, 예산 초안 | Gate 3: 파일럿 승인 |
+| Pilot Running | 승인된 범위 안에서 파일럿이 실제 운영되는 상태 | 운영 데이터, 참여자 피드백, 사고·이슈 기록, 비용 기록이 수집됨 | 운영 로그, KPI, Issue, Decision, 변경 이력 | 중간 점검 승인 필요 가능 |
+| Evaluation | 파일럿 결과를 효과, 안전, 비용, 재현성 기준으로 평가하는 상태 | KPI 달성도, 실패 요인, 법률·재원·운영 리스크가 정리됨 | 평가표, 개선안, 중단·확장 옵션 | 해당 없음 |
+| Scale Decision | 확대, 반복, 수정, 중단 중 하나를 결정하는 상태 | 평가 결과와 재원·파트너·법률 조건이 의사결정 자료로 제출됨 | Decision Memo, 확장 조건, 보류 조건 | Gate 4: 확장 승인 |
+| Archived | 현재 실행 또는 검토를 종료하고 지식으로 보존하는 상태 | 산출물과 데이터가 출처·상태·교훈과 함께 저장됨 | Archive Note, 재사용 자산, 후속 Review 일자 | Gate 5: 아카이브 승인 |
 
-| Output | 대상 | 활용 목적 |
-|---------|------|-----------|
-| 정책 브리프 | 지자체, 공공기관, 정책 담당자 | Haus Hall 사례를 바탕으로 지역사회 돌봄·일·생활 통합 모델의 정책 필요성과 검토 쟁점을 간결하게 제시한다. |
-| 사업계획서 | 버디아코니아 내부 의사결정자, 실행팀 | 국내 파일럿의 목적, 대상, 운영 방식, 인력, 예산, 위험관리 구조를 사업 실행 문서로 정리한다. |
-| 공모사업 제안서 | 중앙정부, 지자체, 민간재단, 사회적경제 지원기관 | 공모 목적에 맞추어 연구 근거, 문제 정의, 실행 계획, 기대 효과, 예산을 제안서 형식으로 전환한다. |
-| AppSheet 데이터 설계 | 내부 운영팀, 데이터 담당자 | 사례 조사, 법률 검토, 출처, 후속 과제, 파일럿 상태를 관리할 수 있는 데이터 구조를 만든다. |
-| 비교 분석 보고서 | 연구팀, 정책 검토자, 파트너 기관 | Haus Hall과 국내 유사 모델 또는 다른 해외 공동체 모델을 비교하여 적용 가능성과 한계를 분석한다. |
-| PPT 발표자료 | 회의 참석자, 후원자, 파트너 기관 | 사례의 핵심 구조, 국내 적용 가능성, 파일럿 제안을 시각적으로 설명한다. |
-| 내부 교육자료 | 버디아코니아 구성원, 자원봉사자, 협력 실무자 | 공동체 돌봄 모델의 원칙, 확인되지 않은 내용 처리 방식, 실행 전 점검 항목을 교육한다. |
-| 대표 보고서 | 대표, 이사회, 핵심 리더십 | 전략적 판단을 위해 연구 요약, 실행 가능성, 재원·법률 쟁점, 의사결정 과제를 정리한다. |
-| 연구 아카이브 | 내부 연구 저장소, 후속 조사자 | 원문 출처, 조사 메모, 판단 수준, 후속 확인 과제를 장기적으로 축적한다. |
-| AI Knowledge Card | AI 작업 시스템, 후속 자동화 에이전트 | 사례의 핵심 데이터, 판단 기준, 후속 AI 작업, 생성 가능한 산출물을 재사용 가능한 지식 카드로 구조화한다. |
+## 13. Decision Gates
+
+| Gate | 승인 대상 | 승인권자 | AI 역할 | 승인 전 필수 조건 | 승인 결과 |
+| --- | --- | --- | --- | --- | --- |
+| Gate 1 | Research 완료 승인 | 지정된 사람 Owner 또는 운영위원회 | 누락 출처 탐지, 요약, 비교표 생성 | 사실·추정·미확인 항목 분리, 핵심 출처 기록 | Evidence Review 완료 또는 Researching으로 반려 |
+| Gate 2 | 법률 검토 승인 | 법률·행정 책임자 및 필요 시 외부 전문가 | 관련 법률·조례 후보 목록화, 질문지 작성 | 최신 법령·조례 확인 계획, 전문가 문의 항목, 고위험 쟁점 표시 | Pilot Ready 진입 또는 Legal Review 보완 |
+| Gate 3 | 파일럿 승인 | 실행 책임자, 예산 책임자, 안전 책임자 | 파일럿 운영안 초안, KPI, 위험관리표 작성 | 범위, 대상, 예산, 보험, 개인정보, 안전, 담당자 명확화 | Pilot Running 시작 또는 Pilot Ready 보완 |
+| Gate 4 | 확장 승인 | 대표, 이사회 또는 지정 의사결정기구 | 평가 데이터 정리, 확장 시나리오 비교 | 파일럿 평가, 재원 지속성, 파트너 역량, 법률 리스크 검토 | 확장, 반복, 수정, 중단 중 결정 |
+| Gate 5 | 아카이브 승인 | Knowledge Owner 또는 운영위원회 | 아카이브 메타데이터 생성, 재사용 자산 추출 | 최종 상태, 교훈, 관련 객체, 재검토 일자 기록 | Archived 확정 및 Knowledge Archive 저장 |
+
+**원칙:** AI는 Gate를 통과시키지 않는다. AI가 생성한 판단은 “초안”, “후보”, “검토 필요” 상태이며, 사람의 명시적 승인 없이는 운영 상태를 다음 단계로 변경하지 않는다.
+
+## 14. Pilot First Core Section
+
+| 항목 | 내용 | 현재 상태 |
+| --- | --- | --- |
+| Pilot Hypothesis | 버디아코니아는 대규모 시설 모델을 복제하지 않고, 주거 없는 낮활동·일 경험·가족지원·지역 파트너 연계를 결합한 최소 파일럿으로 Haus Hall의 통합 운영 원리를 검증할 수 있다. | 초안 |
+| Pilot Purpose | 장애인·가족·지역 파트너가 함께 참여하는 소규모 운영 단위에서 돌봄, 일, 교육, 여가, 가족지원의 연결 가능성을 검증한다. | 초안 |
+| Minimum Pilot Unit | 주 1~2회 낮활동 또는 일 경험 프로그램, 가족지원 상담 또는 모임, 지역 파트너 작업·공간 연계 | 설계 필요 |
+| Excluded at Start | 상시 주거, 공식 의료행위, 고위험 생산시설, 법적 인허가가 필요한 대규모 시설 운영 | 제한 원칙 |
+| Pilot KPI | 참여 지속률, 가족 만족도, 안전사고 0건, 파트너 재참여 의향, 운영비 대비 효과, 재현 가능한 운영 매뉴얼 작성 여부 | 정의 필요 |
+| Pilot Risk | 법률·인허가 오판, 이용자 안전, 개인정보, 자원봉사 의존, 재원 불안정, 지역 민원, 파트너 역할 불명확 | 관리 필요 |
+| Pilot Decision | 3개월 파일럿 가능 여부는 Gate 3에서만 승인한다. | 미승인 |
+
+## 15. Reusable Assets
+
+| Asset Type | 자동 추출 대상 | 재사용 방식 | 현재 추출 상태 |
+| --- | --- | --- | --- |
+| 운영원칙 | Pilot First, 사실·추정 분리, 사람 승인 Gate | 다른 Research Object의 운영 원칙 템플릿 | 초안 |
+| KPI | 참여 지속률, 안전, 만족도, 비용, 파트너 유지, 매뉴얼화 | Pilot Object와 Dashboard 지표 | 후보 |
+| 법률 이슈 | 장애인복지, 주거, 직업재활, 개인정보, 회계, 안전 | Law Object 연결 및 법률 검토 체크리스트 | 후보 |
+| 조례 이슈 | 후보 지자체 장애인복지, 공동체, 공간, 보조금 조례 | Policy Object와 지자체 검토표 | 후보 |
+| 재원 모델 | 공공 보조, 민간재단, 후원, 이용료, 제품·서비스 판매 | Funding Object와 예산 시나리오 | 후보 |
+| 공간 모델 | 낮활동 공간, 작업 공간, 상담 공간, 주거 제외 초기 모델 | Project Object 공간 체크리스트 | 후보 |
+| 역할 모델 | Owner, 법률 검토자, 파일럿 운영자, 파트너, 자원봉사자, 데이터 담당자 | Role Matrix와 Workflow 담당자 배정 | 후보 |
+| 위험요인 | 안전, 인권, 노동성, 재정, 개인정보, 민원 | Risk Register와 Gate 점검표 | 후보 |
+| 파트너 유형 | 복지관, 장애인단체, 교회, 사회적경제 조직, 지역기업, 지자체 | Partner Object 후보군 | 후보 |
+| 교육 모듈 | 공동체 돌봄 원칙, 장애 인권, 안전, 기록, 개인정보 | 내부 교육자료와 자원봉사자 온보딩 | 후보 |
+| 데이터 모델 | Research Object Schema, 출처, 상태, 관계, Lifecycle | AppSheet / Database 공통 스키마 | 초안 |
+| 출력 템플릿 | 정책 브리프, 사업계획서, 제안서, 교육자료, Knowledge Card | Output Generation Workflow | 기존 산출물 유지 |
+
+## 16. Operating Components
+
+| Component | 존재 여부 | 성숙도 | 버디아코니아 적용 난이도 | 운영 메모 |
+| --- | --- | --- | --- | --- |
+| Community | 존재 | 높음 | 중간 | 지역사회와 가족지원·여가를 연결하는 구조는 적용 가치가 높다. |
+| Housing | 존재 | 높음 | 높음 | 주거는 법률·안전·인권 기준이 높으므로 초기 파일럿에서는 제외하거나 파트너 영역으로 둔다. |
+| Work | 존재 | 높음 | 중간~높음 | 일 경험은 가능하지만 근로자성, 임금, 직업재활 기준 확인이 필요하다. |
+| Education | 존재 | 중간~높음 | 중간 | 공식 학교 설립보다 평생교육·전환교육·방과후 협력이 현실적이다. |
+| Volunteer | 부분 존재 추정 | 추가 확인 필요 | 중간 | 자원봉사는 보조 역할이며 돌봄 전문인력을 대체하지 않는다. |
+| Care | 존재 | 높음 | 높음 | 공식 돌봄급여와 제공기관 기준 확인이 필요하다. |
+| Governance | 존재 | 추가 확인 필요 | 중간 | 정관·조직도·이사회 구조 원문 확인 후 참고한다. |
+| Funding | 존재 | 추가 확인 필요 | 높음 | 독일 복지재원 구조를 한국에 직접 이전할 수 없다. |
+| Policy | 존재 | 중간 | 높음 | 한국 법률·조례와 정책 환경에 맞게 재해석해야 한다. |
+| Data | 부분 존재 | 추가 확인 필요 | 중간 | 연차보고서와 운영 데이터 공개 수준 확인 필요. |
+| Technology | 확인 필요 | 추가 확인 필요 | 중간 | AppSheet와 Dashboard는 버디아코니아 내부 운영체계로 설계한다. |
+
+## 17. Dependency Map
+
+| 순서 | Dependency | 선행 조건 | 후행 단계 | AI가 이해해야 할 선후관계 |
+| --- | --- | --- | --- | --- |
+| 1 | 법률 검토 | 국내 적용 범위와 서비스 유형 초안 | 조례 검토 | 법률상 불가능하거나 고위험인 실행은 조례·재원 검토 전에 범위를 조정한다. |
+| 2 | 조례 검토 | 후보 지역 또는 후보 지자체 유형 | 재원 확보 | 지역별 지원 가능성과 인허가 조건이 재원 전략에 영향을 준다. |
+| 3 | 재원 확보 | 법률·조례상 가능한 사업 범위 | 파트너 확보 | 예산 규모와 제한 조건이 파트너 역할을 결정한다. |
+| 4 | 파트너 확보 | 필요한 전문성, 공간, 대상자, 지역 연결 정의 | 공간 확보 | 파트너가 제공 가능한 공간·인력·대상자 접근성을 확인한다. |
+| 5 | 공간 확보 | 접근성, 안전, 용도, 보험, 비용 검토 | 파일럿 | 공간 조건이 충족되지 않으면 파일럿 범위를 축소한다. |
+| 6 | 파일럿 | Gate 3 승인, 담당자, KPI, 위험관리표 | 평가 | 승인 없는 파일럿 실행은 금지한다. |
+| 7 | 평가 | 운영 데이터와 참여자·파트너 피드백 | 확장 | 평가 없이 확장하지 않는다. |
+| 8 | 확장 | Gate 4 승인, 지속 재원, 법률 안정성 | 지식 갱신 / 아카이브 | 확장 결정은 Knowledge Graph와 Reusable Assets를 갱신한다. |
+
+## 18. Knowledge Graph Connections
+
+| 연결 대상 | 연결 목적 | 관계 예시 | 현재 상태 |
+| --- | --- | --- | --- |
+| Research Object | 유사 해외·국내 사례와 비교 | “Haus Hall” ↔ “다른 장애인 공동체 모델” | 후보 |
+| Policy Object | 지자체 정책, 공모, 조례와 연결 | 지역사회 통합돌봄, 장애인 평생교육 정책 | 생성 필요 |
+| Law Object | 법률 쟁점과 최신 원문 확인 | 장애인복지, 주거, 고용, 개인정보, 회계 | 생성 필요 |
+| Funding Object | 재원 조합과 공모사업 관리 | 민간재단, 공공 보조, 후원, 이용료 | 생성 필요 |
+| Project Object | 실제 실행 프로젝트로 전환 | 3개월 낮활동·일 경험 파일럿 | Gate 3 전 |
+| Partner Object | 협력기관 후보 관리 | 복지관, 교회, 사회적경제 조직, 지역기업 | 후보 |
+| Pilot Object | 가설, KPI, 운영 로그 추적 | Pilot Hypothesis와 파일럿 실행 기록 | 생성 필요 |
+| Issue | 위험·논쟁·미확인 항목 관리 | 법률 미확인, 노동성, 안전, 재원 불확실성 | 일부 존재 |
+| Decision | 사람이 승인한 판단 기록 | Gate 1~5 승인·반려·보류 기록 | 생성 필요 |
+
+## 19. Research Object Schema
+
+이 Schema는 모든 Research Object에서 동일하게 사용하며, 향후 AppSheet와 Database에 그대로 입력할 수 있는 공통 필드로 관리한다.
+
+| Field | Type | Required | 현재 값 / 정의 |
+| --- | --- | --- | --- |
+| Object ID | Text | Yes | RO-DE-HAUSHALL-2026-07-05 |
+| Object Name | Text | Yes | Bischöfliche Stiftung Haus Hall – Einrichtungen und Dienste für Menschen |
+| Status | Enum | Yes | Researching / Evidence Review 전 |
+| Country | Text | Yes | 독일 |
+| Region | Text | No | Nordrhein-Westfalen, Westmünsterland, Gescher |
+| Theme | Enum / Tags | Yes | 장애인복지, 주거, 일, 교육, 가족지원, 노인돌봄, 지역사회 |
+| Keywords | Tags | Yes | Haus Hall, Caritas, Werkstätten, 공동체 돌봄, 파일럿 |
+| Evidence Level | Enum | Yes | 부분 확인 / 원문 추가 확인 필요 |
+| Lifecycle | Enum | Yes | Idea, Researching, Evidence Review, Legal Review, Pilot Ready, Pilot Running, Evaluation, Scale Decision, Archived |
+| Impact Score | Number | No | 미정: 미션 정합성 높음, 실행 영향은 파일럿 설계 후 산정 |
+| Automation Score | Number | No | 미정: 출처·상태·Workflow 자동화 가능성 높음 |
+| Decision | Relation / Enum | Yes | 준비 후 가능, Gate 승인 전 |
+| Pilot Score | Number | No | 미정: 3개월 최소 파일럿 기준으로 산정 필요 |
+| Owner | Person | Yes | 버디아코니아 지정 Owner 필요 |
+| Updated At | DateTime | Yes | 2026-07-05 |
+| Next Review | Date | Yes | 다음 조사 또는 Gate 1 요청 전 |
+| Dependencies | Relation List | Yes | 법률 검토 → 조례 검토 → 재원 확보 → 파트너 확보 → 공간 확보 → 파일럿 → 평가 → 확장 |
+| Related Objects | Relation List | No | Policy Object, Law Object, Funding Object, Project Object, Partner Object, Pilot Object, Issue, Decision |
+| Reusable Assets | Relation / JSON | No | 운영원칙, KPI, 법률 이슈, 재원 모델, 역할 모델, 위험요인, 출력 템플릿 |
+| Output Lifecycle | Relation / JSON | No | Draft, Review, Approved, Published, Archived |
+| Source Registry | Relation List | Yes | 섹션 9 출처 기록 방식과 연결 |
+| Human Gate Required | Boolean | Yes | True |
+
+## 20. Generated Workflow
+
+Research Object가 운영체계 안에서 실행되는 Workflow를 정의한다. 각 단계의 산출물은 사람이 검토하고 Gate 승인 여부에 따라 다음 단계로 이동한다.
+
+| Workflow Step | Input | Process | Output | 다음 단계 |
+| --- | --- | --- | --- | --- |
+| Research | 사례명, 공식 자료, 기존 조사 카드, 미확인 항목 | 공식·2차 자료 수집, 사실·추정·미확인 분리, 출처 기록 | Research Memo, Source Registry, 보완 조사 목록 | Evidence |
+| Evidence | Research Memo, 출처 목록, 연차보고서·정관 후보 | 원문 신뢰도 평가, 핵심 수치 검증, 증거 수준 부여 | Evidence Review Note, Evidence Level, Gate 1 요청 자료 | Legal |
+| Legal | Evidence Review Note, 국내 적용 범위, 파일럿 초안 | 법률·조례·인허가·인권·안전 쟁점 매핑, 전문가 질문 작성 | Legal Issue Table, Ordinance Checklist, Gate 2 요청 자료 | Funding |
+| Funding | Legal Issue Table, 파일럿 범위, 비용 구조 | 공공·민간·후원·수익 재원 후보 매핑, 예산 초안 작성 | Funding Map, 공모 캘린더, 1년 예산 초안 | Pilot |
+| Pilot | Pilot Hypothesis, Funding Map, 역할·공간·파트너 후보 | 최소 실행 단위 설계, KPI·위험관리·운영 로그 구조 확정 | Pilot Plan, KPI Table, Risk Register, Gate 3 요청 자료 | Evaluation |
+| Evaluation | 운영 로그, KPI, 비용, 참여자·파트너 피드백 | 효과·안전·비용·재현성 평가, 중단·반복·확장 옵션 비교 | Evaluation Report, Scale Decision Memo | Data Update |
+| Data Update | Evaluation Report, Decision, Issue, Source 변경사항 | AppSheet / Database 필드 갱신, 관계 객체 연결, 상태 변경 기록 | Updated Research Object, Related Objects, Dashboard 지표 | Output Generation |
+| Output Generation | Updated Research Object, 승인된 데이터, 대상별 템플릿 | 정책 브리프, 사업계획서, 제안서, 교육자료, Knowledge Card 생성 | Generated Outputs Draft Package | Knowledge Archive |
+| Knowledge Archive | 승인된 Output, Decision Log, Reusable Assets | 출처·상태·교훈·재사용 자산 저장, Next Review 설정 | Archived Knowledge Package, 재사용 Asset Registry | 필요 시 새 Research 또는 Project로 순환 |
+
+## 21. Generated Outputs and Output Lifecycle
+
+기존 Generated Outputs는 유지하되, 모든 Output은 생성으로 끝나지 않고 Draft → Review → Approved → Published → Archived 상태를 가진다.
+
+| Output | 대상 | 활용 목적 | Lifecycle | 승인 조건 |
+|---------|------|-----------|-----------|-----------|
+| 정책 브리프 | 지자체, 공공기관, 정책 담당자 | Haus Hall 사례를 바탕으로 지역사회 돌봄·일·생활 통합 모델의 정책 필요성과 검토 쟁점을 간결하게 제시한다. | Draft → Review → Approved → Published → Archived | 정책·법률 표현 검토 후 공개 |
+| 사업계획서 | 버디아코니아 내부 의사결정자, 실행팀 | 국내 파일럿의 목적, 대상, 운영 방식, 인력, 예산, 위험관리 구조를 사업 실행 문서로 정리한다. | Draft → Review → Approved → Published/Internal → Archived | Gate 3 파일럿 승인 전 내부 승인 |
+| 공모사업 제안서 | 중앙정부, 지자체, 민간재단, 사회적경제 지원기관 | 공모 목적에 맞추어 연구 근거, 문제 정의, 실행 계획, 기대 효과, 예산을 제안서 형식으로 전환한다. | Draft → Review → Approved → Submitted/Published → Archived | 공모 요건·예산·법률 검토 완료 |
+| AppSheet 데이터 설계 | 내부 운영팀, 데이터 담당자 | 사례 조사, 법률 검토, 출처, 후속 과제, 파일럿 상태를 관리할 수 있는 데이터 구조를 만든다. | Draft → Review → Approved → Published/Internal → Archived | Schema 필드와 권한 구조 승인 |
+| 비교 분석 보고서 | 연구팀, 정책 검토자, 파트너 기관 | Haus Hall과 국내 유사 모델 또는 다른 해외 공동체 모델을 비교하여 적용 가능성과 한계를 분석한다. | Draft → Review → Approved → Published/Internal → Archived | 비교 기준과 출처 검토 완료 |
+| PPT 발표자료 | 회의 참석자, 후원자, 파트너 기관 | 사례의 핵심 구조, 국내 적용 가능성, 파일럿 제안을 시각적으로 설명한다. | Draft → Review → Approved → Published → Archived | 대상별 메시지와 공개 범위 승인 |
+| 내부 교육자료 | 버디아코니아 구성원, 자원봉사자, 협력 실무자 | 공동체 돌봄 모델의 원칙, 확인되지 않은 내용 처리 방식, 실행 전 점검 항목을 교육한다. | Draft → Review → Approved → Published/Internal → Archived | 인권·안전·개인정보 내용 검토 |
+| 대표 보고서 | 대표, 이사회, 핵심 리더십 | 전략적 판단을 위해 연구 요약, 실행 가능성, 재원·법률 쟁점, 의사결정 과제를 정리한다. | Draft → Review → Approved → Published/Internal → Archived | Gate 의사결정 자료로 승인 |
+| 연구 아카이브 | 내부 연구 저장소, 후속 조사자 | 원문 출처, 조사 메모, 판단 수준, 후속 확인 과제를 장기적으로 축적한다. | Draft → Review → Approved → Archived | Gate 5 아카이브 승인 |
+| AI Knowledge Card | AI 작업 시스템, 후속 자동화 에이전트 | 사례의 핵심 데이터, 판단 기준, 후속 Workflow, 생성 가능한 산출물을 재사용 가능한 지식 카드로 구조화한다. | Draft → Review → Approved → Published/Internal → Archived | Schema·관계·재사용 자산 검토 완료 |
+
+### Output Lifecycle 공통 규칙
+
+| Output Status | 의미 | 다음 단계 진입 조건 |
+| --- | --- | --- |
+| Draft | AI 또는 사람이 초안을 생성한 상태 | 출처, 법률 표현, 대상 독자, 공개 범위가 검토 대상으로 지정됨 |
+| Review | 담당자가 내용과 위험을 검토하는 상태 | 수정 사항 반영, 승인권자 지정, 공개 여부 판단 완료 |
+| Approved | 사람이 승인한 상태 | 배포 채널, 사용 목적, 버전이 확정됨 |
+| Published | 내부 또는 외부 채널에 배포된 상태 | 배포 일자, 대상, 링크 또는 저장 위치 기록 |
+| Archived | 더 이상 최신 산출물로 사용하지 않고 지식으로 보존하는 상태 | 후속 버전 또는 종료 사유, 재사용 가능 요소 기록 |
