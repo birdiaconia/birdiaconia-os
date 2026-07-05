@@ -204,3 +204,84 @@ p { line-height: 1.55; }
   .today-grid, .flow-row.compact { grid-template-columns: 1fr; }
   .summary-card { min-height: auto; }
 }
+
+.mode-pill {
+  margin: 14px 0 0;
+  padding: 10px 12px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.room-card.default { background: var(--panel-strong); }
+.room-card.warning { background: linear-gradient(135deg, #ffffff 0%, var(--amber-soft) 100%); }
+.muted { color: var(--muted); margin-bottom: 0; }
+
+.input-sections { display: grid; gap: 18px; }
+.input-sections h3 { margin: 0 0 10px; font-size: 16px; }
+.form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.form-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: #fff;
+}
+.form-card p { margin: 4px 0 0; color: var(--muted); font-size: 13px; }
+.form-card a, .form-card button {
+  flex: 0 0 auto;
+  border: 0;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 800;
+  padding: 10px 12px;
+}
+.form-card.disabled { opacity: 0.68; background: #f8fafc; }
+.form-card button:disabled { background: #98a2b3; cursor: not-allowed; }
+
+.status-list {
+  display: grid;
+  gap: 8px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: #fff;
+}
+.status-list p { margin: 0; color: var(--muted); }
+.status-list strong { color: var(--text); }
+.warning-text { color: #b54708 !important; font-weight: 800; }
+.storage-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.storage-folder {
+  display: grid;
+  gap: 8px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: #fff;
+}
+.storage-folder span {
+  display: inline-flex;
+  width: fit-content;
+  border-radius: 999px;
+  background: #f2f4f7;
+  color: #475467;
+  font-size: 12px;
+  font-weight: 760;
+  padding: 6px 8px;
+}
+.flow-list { display: grid; gap: 10px; }
+
+@media (max-width: 760px) {
+  .form-grid, .storage-grid { grid-template-columns: 1fr; }
+  .form-card { align-items: stretch; flex-direction: column; }
+  .form-card a, .form-card button { text-align: center; }
+}
