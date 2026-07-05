@@ -1,4 +1,6 @@
-const navigation = ["운영실", "연구", "현장", "사업", "사람", "기록", "AI", "설정"];
+import { bisAgents, bisSystem } from "@/data/bisAgents";
+
+const navigation = ["운영실", "연구", "현장", "사업", "사람", "기록", "AI", "BIS", "설정"];
 
 const todayCards = [
   { title: "오늘 해야 할 일", value: "8", note: "승인 3 · 검토 5", tone: "blue" },
@@ -103,6 +105,57 @@ export default function Home() {
               <button type="button" key={action}>
                 {action}
               </button>
+            ))}
+          </div>
+        </section>
+
+        <section className="section-block bis-section" id="BIS" aria-labelledby="bis-heading">
+          <div className="section-heading bis-heading">
+            <div>
+              <p className="eyebrow">AI command layer</p>
+              <h2 id="bis-heading">{bisSystem.name}</h2>
+            </div>
+            <p>{bisSystem.description}</p>
+          </div>
+
+          <div className="bis-operating-language" aria-label="BIS operating language">
+            {bisSystem.operatingLanguage.map((item) => (
+              <span key={item}>{item}</span>
+            ))}
+          </div>
+
+          <div className="bis-module-list" aria-label="BIS operational modules">
+            {bisAgents.map((agent) => (
+              <article className="bis-module" key={agent.name}>
+                <div className="bis-module-header">
+                  <div>
+                    <span className="module-label">Operational module</span>
+                    <h3>{agent.name}</h3>
+                  </div>
+                  <span className={`status-pill ${agent.status.toLowerCase().replace(" ", "-")}`}>
+                    {agent.status}
+                  </span>
+                </div>
+
+                <dl className="module-fields">
+                  <div>
+                    <dt>Core role</dt>
+                    <dd>{agent.role}</dd>
+                  </div>
+                  <div>
+                    <dt>Main inputs</dt>
+                    <dd>{agent.inputs.join(" · ")}</dd>
+                  </div>
+                  <div>
+                    <dt>Main outputs</dt>
+                    <dd>{agent.outputs.join(" · ")}</dd>
+                  </div>
+                  <div className="command-row">
+                    <dt>Example command</dt>
+                    <dd>{agent.exampleCommand}</dd>
+                  </div>
+                </dl>
+              </article>
             ))}
           </div>
         </section>
