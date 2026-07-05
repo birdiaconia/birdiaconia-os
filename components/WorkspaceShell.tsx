@@ -20,7 +20,9 @@ export function WorkspaceShell({
   const role = getCurrentUserRole();
   const user = getCurrentUser();
   const visibleRooms = rooms.filter((room) => canViewRoom(role, room.id, mode));
-  return <main className="workspace-shell"><aside className="sidebar" aria-label="Birdiaconia Workspace 탐색"><div className="brand"><span className="brand-mark">B</span><div><strong>Birdiaconia</strong><span>버디아코니아 Workspace</span></div></div><div className="mode-pill">{mode} · {role}</div><nav className="nav-list">{visibleRooms.map((room) => <a className={room.id === "public-home" ? "active" : ""} href={`#${room.id}`} key={room.id}>{room.label}</a>)}</nav></aside><section className="content-panel"><header className="page-header" id="public-home"><p className="eyebrow">Workspace v0.2</p><h1>Birdiaconia Workspace 운영실</h1><p>Birdiaconia Workspace는 Google Forms로 입력된 운영 데이터를 목적별 Google Sheets에 저장하고, Private Workspace에서 오늘의 판단·AI 작업·보고서 생성을 준비하는 운영실입니다.</p><p className="integration-note">현재 사용자: {user.name} · Google Login 및 Users Sheet 연동 전 placeholder currentUser.role 구조입니다.</p></header><section className="operation-flow"><span>Google Forms 입력</span><strong>→</strong><span>목적별 Sheets 저장</span><strong>→</strong><span>Private Workspace</span><strong>→</strong><span>Today Room 판단</span><strong>→</strong><span>보고/결정</span></section>{canViewRoom(role, "today", mode) && <TodayRoom mode={mode} role={role} />}{canViewRoom(role, "input", mode) && <InputRoom mode={mode} role={role} />}<StorageStatusCard mode={mode} role={role} /><RoomCard eyebrow="Implementation Ready" title="Google Sheets API 서버 연동 준비"><p className="muted">서비스 계정 키와 Spreadsheet ID는 클라이언트에 노출하지 않고 API Route에서만 사용합니다. Users, Activity Log, Tasks, Schedules, Decisions, Field, Research, Business, AI, Reports는 목적별 Sheet ID 환경변수로 연결합니다.</p></RoomCard></section></main>;
+  const activeRoom = mode === "public" ? "public-home" : "today";
+  const activeAgents = bisAgents.filter((agent) => agent.status === "Active").length;
+
   return (
     <main className="workspace-shell">
       <aside className="sidebar" aria-label="Birdiaconia Workspace 탐색">
@@ -31,72 +33,68 @@ export function WorkspaceShell({
             <span>버디아코니아 Workspace</span>
           </div>
         </div>
-        <div className="mode-pill">
-          {mode} · {role}
-        </div>
+        <div className="mode-pill">{mode} · {role}</div>
         <nav className="nav-list">
           {visibleRooms.map((room) => (
             <a
-              className={room.id === "public-home" ? "active" : ""}
+              className={room.id === activeRoom ? "active" : ""}
               href={`#${room.id}`}
               key={room.id}
+              title={room.description}
             >
               {room.label}
             </a>
           ))}
         </nav>
       </aside>
+
       <section className="content-panel">
-        <header className="page-header" id="public-home">
-          <p className="eyebrow">Workspace v0.2</p>
-          <h1>Birdiaconia Workspace 운영실</h1>
-          <p>
-            Birdiaconia / 버디아코니아는 하나의 Workspace 안에서 Public Mode,
-            Private Mode, Role Permission을 분리합니다.
-          </p>
-          <p className="integration-note">
-            현재 사용자: {user.name} · Google Login 및 Users Sheet 연동 전
-            placeholder 구조입니다.
-          </p>
-        </header>
-        <section className="operation-flow">
+        {mode === "public" && (
+          <header className="page-header" id="public-home">
+            <p className="eyebrow">Workspace v0.2 MVP</p>
+            <h1>Birdiaconia Workspace 운영실</h1>
+            <p>
+              Public Home은 운영실 구조를 안내하고, 실제 판단의 중심은 Today
+              Room과 Input Room으로 이동합니다.
+            </p>
+            <p className="integration-note">
+              현재 사용자: {user.name} · 실제 운영 데이터는 Private Mode에서
+              Google Sheets 응답을 불러와 표시됩니다.
+            </p>
+          </header>
+        )}
+
+        <section className="operation-flow" aria-label="Workspace 운영 흐름">
           <span>Google Forms 입력</span>
           <strong>→</strong>
-          <span>목적별 Sheets 저장</span>
+          <span>목적별 Google Sheets</span>
           <strong>→</strong>
-          <span>Private 조회</span>
+          <span>Private Workspace 표시</span>
           <strong>→</strong>
-          <span>Today 판단</span>
+          <span>Today Room 판단</span>
           <strong>→</strong>
-          <span>보고/결정</span>
+          <span>AI/보고/결정</span>
         </section>
-        {canViewRoom(role, "today", mode) && (
-          <TodayRoom mode={mode} role={role} />
-        )}
-        {canViewRoom(role, "input", mode) && (
-          <InputRoom mode={mode} role={role} />
-        )}
-        <StorageStatusCard mode={mode} role={role} />
-        {bisSystem && (
-          <RoomCard eyebrow="BIS Command Layer" title={bisSystem.name}>
-            <p className="muted">{bisSystem.description}</p>
-            <p className="integration-note">
-              등록된 BIS 에이전트: {bisAgents.length}개 · Active:{" "}
-              {bisAgents.filter((agent) => agent.status === "Active").length}개
+
+        {canViewRoom(role, "today", mode) && <TodayRoom mode={mode} role={role} />}
+        {canViewRoom(role, "input", mode) && <InputRoom mode={mode} role={role} />}
+
+        {bisSystem && canViewRoom(role, "bis", mode) && (
+          <RoomCard id="bis" eyebrow="BIS Command Layer" title={bisSystem.name}>
+            <p className="muted">
+              명령 레이어는 Workspace 운영실에서 AI 작업을 실행하기 위한
+              구조입니다. Storage 하위 설명이 아니라 Today Room과 Input Room의
+              운영 흐름을 지원하는 별도 섹션입니다.
             </p>
+            <div className="status-list">
+              <p><strong>등록된 BIS 에이전트 수:</strong> {bisAgents.length}개</p>
+              <p><strong>Active 에이전트 수:</strong> {activeAgents}개</p>
+              <p><strong>운영 설명:</strong> {bisSystem.description}</p>
+            </div>
           </RoomCard>
         )}
-        <RoomCard
-          eyebrow="Implementation Ready"
-          title="Google Sheets API 서버 연동 준비"
-        >
-          <p className="muted">
-            서비스 계정 키와 Spreadsheet ID는 클라이언트에 노출하지 않고 API
-            Route에서만 사용합니다. Users, Activity Log, Tasks, Schedules,
-            Decisions, Field, Research, Business, AI, Reports는 목적별 Sheet ID
-            환경변수로 연결합니다.
-          </p>
-        </RoomCard>
+
+        {canViewRoom(role, "storage", mode) && <StorageStatusCard mode={mode} role={role} />}
       </section>
     </main>
   );
