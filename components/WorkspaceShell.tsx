@@ -3,6 +3,7 @@ import { getCurrentUser, getCurrentUserRole } from "../lib/workspace-auth";
 import { getWorkspaceMode, rooms } from "../lib/workspace-config";
 import { canViewRoom } from "../lib/workspace-permissions";
 import { InputRoom } from "./InputRoom";
+import { PrivacySecurityCard } from "./PrivacySecurityCard";
 import { RoomCard } from "./RoomCard";
 import { StorageStatusCard } from "./StorageStatusCard";
 import { TodayRoom } from "./TodayRoom";
@@ -51,30 +52,32 @@ export function WorkspaceShell({
       <section className="content-panel">
         {mode === "public" && (
           <header className="page-header" id="public-home">
-            <p className="eyebrow">Workspace v0.2 MVP</p>
+            <p className="eyebrow">Workspace v0.3 · Privacy Baseline</p>
             <h1>Birdiaconia Workspace 운영실</h1>
             <p>
-              Public Home은 운영실 구조를 안내하고, 실제 판단의 중심은 Today
-              Room과 Input Room으로 이동합니다.
+              Public Home은 공개 가능한 구조만 안내합니다. 실제 운영·입력·저장
+              및 개인정보 처리는 Private Workspace 경계 안에서 수행합니다.
             </p>
             <p className="integration-note">
-              현재 사용자: {user.name} · 실제 운영 데이터는 Private Mode에서
-              Google Sheets 응답을 불러와 표시됩니다.
+              현재 사용자: {user.name} · 공개 모드에서는 개인정보·운영 저장소를
+              노출하지 않습니다.
             </p>
           </header>
         )}
 
-        <section className="operation-flow" aria-label="Workspace 운영 흐름">
-          <span>Google Forms 입력</span>
-          <strong>→</strong>
-          <span>목적별 Google Sheets</span>
-          <strong>→</strong>
-          <span>Private Workspace 표시</span>
-          <strong>→</strong>
-          <span>Today Room 판단</span>
-          <strong>→</strong>
-          <span>AI/보고/결정</span>
-        </section>
+        {mode === "private" && (
+          <section className="operation-flow" aria-label="Workspace 운영 흐름">
+            <span>느슨한 입력</span>
+            <strong>→</strong>
+            <span>분류·목적·권한 확인</span>
+            <strong>→</strong>
+            <span>Private Storage</span>
+            <strong>→</strong>
+            <span>Privacy Gate</span>
+            <strong>→</strong>
+            <span>AI/판단/출력</span>
+          </section>
+        )}
 
         {canViewRoom(role, "today", mode) && <TodayRoom mode={mode} role={role} />}
         {canViewRoom(role, "input", mode) && <InputRoom mode={mode} role={role} />}
@@ -82,9 +85,9 @@ export function WorkspaceShell({
         {bisSystem && canViewRoom(role, "bis", mode) && (
           <RoomCard id="bis" eyebrow="BIS Command Layer" title={bisSystem.name}>
             <p className="muted">
-              명령 레이어는 Workspace 운영실에서 AI 작업을 실행하기 위한
-              구조입니다. Storage 하위 설명이 아니라 Today Room과 Input Room의
-              운영 흐름을 지원하는 별도 섹션입니다.
+              BIS는 원본 개인정보 전체를 직접 소비하는 구조가 아니라, 목적과
+              권한을 확인한 뒤 Privacy Gate를 통과한 최소 정보로 작업하는 것을
+              기본 원칙으로 합니다.
             </p>
             <div className="status-list">
               <p><strong>등록된 BIS 에이전트 수:</strong> {bisAgents.length}개</p>
@@ -92,6 +95,10 @@ export function WorkspaceShell({
               <p><strong>운영 설명:</strong> {bisSystem.description}</p>
             </div>
           </RoomCard>
+        )}
+
+        {canViewRoom(role, "privacy-security", mode) && (
+          <PrivacySecurityCard mode={mode} role={role} />
         )}
 
         {canViewRoom(role, "storage", mode) && <StorageStatusCard mode={mode} role={role} />}

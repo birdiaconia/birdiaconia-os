@@ -2,7 +2,31 @@ export type Role = "Owner" | "Operator" | "Field" | "Researcher" | "Partner" | "
 
 export type WorkspaceMode = "public" | "private";
 
-export type DataClassification = "PUBLIC" | "INTERNAL" | "PRIVATE" | "SENSITIVE";
+export type DataClassification =
+  | "PUBLIC"
+  | "INTERNAL"
+  | "PRIVATE"
+  | "SENSITIVE"
+  | "IDENTITY"
+  | "SECRET";
+
+export type ProcessingPurpose =
+  | "operations"
+  | "participation"
+  | "case-support"
+  | "reporting"
+  | "research"
+  | "notification"
+  | "identity"
+  | "legal-obligation";
+
+export type LegalBasis =
+  | "consent"
+  | "contract"
+  | "legal-obligation"
+  | "legitimate-interest"
+  | "public-task"
+  | "not-set";
 
 export type RoomId =
   | "public-home"
@@ -18,6 +42,7 @@ export type RoomId =
   | "decisions"
   | "bis"
   | "storage"
+  | "privacy-security"
   | "settings";
 
 export type FormType =
@@ -31,6 +56,17 @@ export type FormType =
   | "grants"
   | "aiRequests"
   | "reportCandidates";
+
+export type PrivacyMetadata = {
+  purpose: ProcessingPurpose;
+  legalBasis: LegalBasis;
+  consentId?: string;
+  retentionUntil?: string;
+  subjectId?: string;
+  aiAllowed: boolean;
+  aiRedactionRequired: boolean;
+  exportAllowed: boolean;
+};
 
 export type WorkspaceObjectBase = {
   id: string;
@@ -48,6 +84,7 @@ export type WorkspaceObjectBase = {
   createdByRole: Role;
   assignedTo?: string;
   accessLevel: "public" | "internal" | "restricted" | "sensitive";
+  privacy?: PrivacyMetadata;
   reviewStatus?: string;
   createdAt: string;
   updatedAt: string;
@@ -66,11 +103,45 @@ export type UserObject = {
   updatedAt: string;
 };
 
+export type ConsentObject = {
+  consentId: string;
+  subjectId: string;
+  purpose: ProcessingPurpose;
+  categories: DataClassification[];
+  granted: boolean;
+  version: string;
+  grantedAt?: string;
+  withdrawnAt?: string;
+};
+
+export type AuditEvent = {
+  eventId: string;
+  actorId: string;
+  actorRole: Role;
+  action: "view" | "create" | "update" | "export" | "delete" | "ai-process";
+  objectId: string;
+  classification: DataClassification;
+  purpose: ProcessingPurpose;
+  createdAt: string;
+};
+
 export type ActivityLogObject = WorkspaceObjectBase & { objectType: "activityLog"; action: string };
 export type TaskObject = WorkspaceObjectBase & { objectType: "task"; due: string; nextAction: string };
 export type ScheduleObject = WorkspaceObjectBase & { objectType: "schedule"; date: string; time: string; location: string };
 export type FieldObject = WorkspaceObjectBase & { objectType: "field"; recordId: string; siteName: string; category: string; summary: string; issueLevel: string; nextAction: string; hasSensitiveRecord?: boolean };
-export type FieldPrivateObject = { privateId: string; recordId: string; personName: string; phone: string; address: string; birthYear: string; sensitiveMemo: string; accessLevel: "sensitive"; createdBy: string; dataClassification: "SENSITIVE" };
+export type FieldPrivateObject = {
+  privateId: string;
+  recordId: string;
+  personName: string;
+  phone: string;
+  address: string;
+  birthYear: string;
+  sensitiveMemo: string;
+  accessLevel: "sensitive";
+  createdBy: string;
+  dataClassification: "SENSITIVE";
+  privacy: PrivacyMetadata;
+};
 export type ResearchObject = WorkspaceObjectBase & { objectType: "research"; topic: string };
 export type BusinessObject = WorkspaceObjectBase & { objectType: "business"; deadline?: string };
 export type AIRequestObject = WorkspaceObjectBase & { objectType: "aiRequest"; output: string };

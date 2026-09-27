@@ -1,7 +1,7 @@
 import type { RoomId, WorkspaceMode } from "./workspace-types";
 
 export function getWorkspaceMode(): WorkspaceMode {
-  const mode = process.env.NEXT_PUBLIC_WORKSPACE_MODE ?? process.env.WORKSPACE_MODE ?? "public";
+  const mode = process.env.WORKSPACE_MODE ?? "public";
   return mode === "private" ? "private" : "public";
 }
 
@@ -9,8 +9,11 @@ export function isPublicMode() { return getWorkspaceMode() === "public"; }
 export function isPrivateMode() { return getWorkspaceMode() === "private"; }
 
 export function areSensitiveFormsEnabled() {
-  const value = process.env.NEXT_PUBLIC_ENABLE_SENSITIVE_FORMS ?? process.env.ENABLE_SENSITIVE_FORMS ?? "false";
-  return value === "true";
+  return process.env.ENABLE_SENSITIVE_FORMS === "true";
+}
+
+export function isAiSensitiveProcessingEnabled() {
+  return process.env.ENABLE_AI_SENSITIVE_PROCESSING === "true";
 }
 
 export const rooms: { id: RoomId; label: string; description: string }[] = [
@@ -27,11 +30,12 @@ export const rooms: { id: RoomId; label: string; description: string }[] = [
   { id: "decisions", label: "Decisions", description: "결정 요청" },
   { id: "bis", label: "BIS", description: "AI 작업 실행을 위한 Command Layer" },
   { id: "storage", label: "Storage", description: "Drive/Sheets 저장소 상태" },
+  { id: "privacy-security", label: "Privacy & Security", description: "개인정보·권한·AI 처리 안전장치" },
   { id: "settings", label: "Settings", description: "Workspace 설정" },
 ];
 
 export const storageFolders = [
-  { folder: "00_System", sheets: ["Birdiaconia_Users", "Birdiaconia_Settings", "Birdiaconia_Activity_Log"] },
+  { folder: "00_System", sheets: ["Birdiaconia_Users", "Birdiaconia_Settings", "Birdiaconia_Activity_Log", "Birdiaconia_Consent_Ledger", "Birdiaconia_Audit_Log"] },
   { folder: "01_Operations", sheets: ["Birdiaconia_Tasks_Responses", "Birdiaconia_Schedules_Responses", "Birdiaconia_Decisions_Responses"] },
   { folder: "02_Field", sheets: ["Birdiaconia_Field_Records_Responses", "Birdiaconia_Field_Private_Responses"] },
   { folder: "03_Research", sheets: ["Birdiaconia_Research_Responses"] },
