@@ -575,3 +575,68 @@ p { line-height: 1.55; }
     text-align: center;
   }
 }
+
+.runtime-probe {
+  border-left: 5px solid #111827;
+}
+
+.runtime-probe code {
+  border-radius: 6px;
+  background: #f2f4f7;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+.runtime-probe-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.runtime-probe-actions button,
+.runtime-probe-actions a {
+  border: 0;
+  border-radius: 12px;
+  background: #111827;
+  color: #fff;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 800;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+
+.runtime-probe-actions a {
+  background: #eef2f6;
+  color: #344054;
+}
+
+.runtime-probe-actions button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.runtime-result {
+  display: grid;
+  gap: 10px;
+  padding: 15px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: #f8fafc;
+}
+
+.runtime-result p,
+.runtime-result ul {
+  margin: 0;
+}
+
+.runtime-result ul {
+  display: grid;
+  gap: 8px;
+  padding-left: 20px;
+}
+
+.runtime-result li span {
+  color: var(--muted);
+  font-size: 13px;
+}

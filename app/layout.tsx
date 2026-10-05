@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import "./agent.css";
 
 export const metadata: Metadata = {
-  title: "Birdiaconia OS · Agent Workspace",
-  description: "목표를 받아 Core와 도구를 연결하고 사람의 의미 있는 결정만 승인받는 Birdiaconia 운영체제",
+  title: "Birdiaconia · 버디아코니아",
+  description: "봉사·체류·배움·관계와 지역 활동을 하나의 흐름으로 연결하는 Birdiaconia",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
